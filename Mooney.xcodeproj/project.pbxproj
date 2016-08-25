@@ -8,22 +8,42 @@
 
 /* Begin PBXBuildFile section */
 		BAC4D38E1D6533CF0042C774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */; };
-		BAC4D3901D6533CF0042C774 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D38F1D6533CF0042C774 /* ViewController.swift */; };
+		BAC4D3901D6533CF0042C774 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D38F1D6533CF0042C774 /* TransactionsTableViewController.swift */; };
 		BAC4D3931D6533CF0042C774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4D3911D6533CF0042C774 /* Main.storyboard */; };
 		BAC4D3961D6533CF0042C774 /* Mooney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3941D6533CF0042C774 /* Mooney.xcdatamodeld */; };
 		BAC4D3981D6533CF0042C774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC4D3971D6533CF0042C774 /* Assets.xcassets */; };
 		BAC4D39B1D6533CF0042C774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4D3991D6533CF0042C774 /* LaunchScreen.storyboard */; };
+		BAC4D3A81D655A440042C774 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3A21D655A440042C774 /* Category+CoreDataProperties.swift */; };
+		BAC4D3A91D655A440042C774 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3A31D655A440042C774 /* Category.swift */; };
+		BAC4D3AA1D655A440042C774 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3A41D655A440042C774 /* Account+CoreDataProperties.swift */; };
+		BAC4D3AB1D655A440042C774 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3A51D655A440042C774 /* Account.swift */; };
+		BAC4D3AC1D655A440042C774 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3A61D655A440042C774 /* Transaction+CoreDataProperties.swift */; };
+		BAC4D3AD1D655A440042C774 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3A71D655A440042C774 /* Transaction.swift */; };
+		BAC4D3B01D655DB30042C774 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3AF1D655DB30042C774 /* Model.swift */; };
+		BADA7B211D6BEBB700F28FD0 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */; };
+		BAE5E89E1D6DDF200084BDE3 /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */; };
+		BAE5E8A31D6DE08B0084BDE3 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BAC4D38A1D6533CF0042C774 /* Mooney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAC4D38F1D6533CF0042C774 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAC4D38F1D6533CF0042C774 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
 		BAC4D3921D6533CF0042C774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAC4D3951D6533CF0042C774 /* Mooney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Mooney.xcdatamodel; sourceTree = "<group>"; };
 		BAC4D3971D6533CF0042C774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAC4D39A1D6533CF0042C774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAC4D39C1D6533CF0042C774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAC4D3A21D655A440042C774 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BAC4D3A31D655A440042C774 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		BAC4D3A41D655A440042C774 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BAC4D3A51D655A440042C774 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		BAC4D3A61D655A440042C774 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BAC4D3A71D655A440042C774 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		BAC4D3AF1D655DB30042C774 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
+		BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
+		BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +76,11 @@
 		BAC4D38C1D6533CF0042C774 /* Mooney */ = {
 			isa = PBXGroup;
 			children = (
+				BAE5E89F1D6DDF9C0084BDE3 /* Transactions */,
+				BAE5E8A01D6DDFA20084BDE3 /* Accounts */,
+				BAE5E8A11D6DE06E0084BDE3 /* Categories */,
+				BAC4D3AE1D655A600042C774 /* Model */,
 				BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */,
-				BAC4D38F1D6533CF0042C774 /* ViewController.swift */,
 				BAC4D3911D6533CF0042C774 /* Main.storyboard */,
 				BAC4D3971D6533CF0042C774 /* Assets.xcassets */,
 				BAC4D3991D6533CF0042C774 /* LaunchScreen.storyboard */,
@@ -65,6 +88,45 @@
 				BAC4D3941D6533CF0042C774 /* Mooney.xcdatamodeld */,
 			);
 			path = Mooney;
+			sourceTree = "<group>";
+		};
+		BAC4D3AE1D655A600042C774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4D3AF1D655DB30042C774 /* Model.swift */,
+				BAC4D3A21D655A440042C774 /* Category+CoreDataProperties.swift */,
+				BAC4D3A31D655A440042C774 /* Category.swift */,
+				BAC4D3A41D655A440042C774 /* Account+CoreDataProperties.swift */,
+				BAC4D3A51D655A440042C774 /* Account.swift */,
+				BAC4D3A61D655A440042C774 /* Transaction+CoreDataProperties.swift */,
+				BAC4D3A71D655A440042C774 /* Transaction.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BAE5E89F1D6DDF9C0084BDE3 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4D38F1D6533CF0042C774 /* TransactionsTableViewController.swift */,
+				BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */,
+			);
+			name = Transactions;
+			sourceTree = "<group>";
+		};
+		BAE5E8A01D6DDFA20084BDE3 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */,
+			);
+			name = Accounts;
+			sourceTree = "<group>";
+		};
+		BAE5E8A11D6DE06E0084BDE3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +200,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAC4D3901D6533CF0042C774 /* ViewController.swift in Sources */,
+				BAC4D3AC1D655A440042C774 /* Transaction+CoreDataProperties.swift in Sources */,
+				BAE5E8A31D6DE08B0084BDE3 /* CategoriesTableViewController.swift in Sources */,
+				BAE5E89E1D6DDF200084BDE3 /* AccountsTableViewController.swift in Sources */,
+				BAC4D3AA1D655A440042C774 /* Account+CoreDataProperties.swift in Sources */,
+				BAC4D3901D6533CF0042C774 /* TransactionsTableViewController.swift in Sources */,
+				BAC4D3A91D655A440042C774 /* Category.swift in Sources */,
 				BAC4D38E1D6533CF0042C774 /* AppDelegate.swift in Sources */,
+				BAC4D3B01D655DB30042C774 /* Model.swift in Sources */,
 				BAC4D3961D6533CF0042C774 /* Mooney.xcdatamodeld in Sources */,
+				BAC4D3A81D655A440042C774 /* Category+CoreDataProperties.swift in Sources */,
+				BADA7B211D6BEBB700F28FD0 /* TransactionDetailsViewController.swift in Sources */,
+				BAC4D3AB1D655A440042C774 /* Account.swift in Sources */,
+				BAC4D3AD1D655A440042C774 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +362,7 @@
 				BAC4D3A11D6533CF0042C774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
