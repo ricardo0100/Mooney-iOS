@@ -1,5 +1,5 @@
 //
-//  Account.swift
+//  BaseEntity.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 29/08/16.
@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 
 
-class Account: BaseEntity {
+class BaseEntity: NSManagedObject {
 
 // Insert code here to add functionality to your managed object subclass
 

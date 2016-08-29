@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.swift
 //  Mooney
 //
-//  Created by Ricardo Gehrke Filho on 17/08/16.
+//  Created by Ricardo Gehrke Filho on 29/08/16.
 //  Copyright © 2016 Ricardo Gehrke Filho. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,9 +15,7 @@ import CoreData
 extension Transaction {
 
     @NSManaged var value: NSDecimalNumber?
-    @NSManaged var name: String?
-    @NSManaged var time: NSDate?
-    @NSManaged var category: Category?
     @NSManaged var account: Account?
+    @NSManaged var category: Category?
 
 }

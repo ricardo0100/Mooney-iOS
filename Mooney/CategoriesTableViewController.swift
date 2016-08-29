@@ -9,49 +9,27 @@
 import UIKit
 import CoreData
 
-class CategoriesTableViewController: UITableViewController {
-
-    let app = UIApplication.sharedApplication().delegate as! AppDelegate
+class CategoriesTableViewController: CoreDataTableViewController {
     
-    var categories: [Category] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadCategories()
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return categories.count
+    override var entityName: String? {
+        return "Category"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Category Cell", forIndexPath: indexPath)
-        let category = categories[indexPath.row]
-        cell.textLabel?.text = category.name
+        if let results = fetchedResultsController {
+            cell.textLabel?.text = results.objectAtIndexPath(indexPath).name
+        }
         return cell
     }
-    
-    //    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //        if segue.identifier == "Select Transaction" {
-    //            if let indexPath = tableView.indexPathForSelectedRow {
-    //                let selectedTransaction = accounts[indexPath.row]
-    //                let viewController = segue.destinationViewController as! TransactionDetailsViewController
-    //                viewController.transactionModel = selectedTransaction
-    //            }
-    //        }
-    //    }
-    
-    func loadCategories() {
-        let fetchRequest = NSFetchRequest(entityName: "Category")
-        do {
-            let results = try app.managedObjectContext.executeFetchRequest(fetchRequest)
-            categories = results as! [Category]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Select Category" {
+            if let results = fetchedResultsController {
+                let category = results.objectAtIndexPath(tableView.indexPathForSelectedRow!) as! Category
+                let destination = segue.destinationViewController as! CategoryDetailsViewController
+                destination.categoryModel = category
+            }
         }
     }
 

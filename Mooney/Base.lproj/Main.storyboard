@@ -26,13 +26,13 @@
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="W9P-b8-CXE" kind="show" identifier="Select Transaction" id="ksv-Vh-bn0"/>
+                                    <segue destination="W9P-b8-CXE" kind="show" identifier="Select Transaction" id="94y-IG-YhI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -63,25 +63,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy New Car" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHM-Ix-2Zn">
                                 <rect key="frame" x="16" y="72" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wallet money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Reb-Wo-vPM">
                                 <rect key="frame" x="16" y="102" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ef8-C9-yAw">
                                 <rect key="frame" x="16" y="127" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 47,99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KxE-0L-Azy">
                                 <rect key="frame" x="16" y="152" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -173,13 +173,13 @@
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Gkm-uB-aF1" kind="show" id="gMN-8c-xXE"/>
+                                    <segue destination="Gkm-uB-aF1" kind="show" identifier="Select Account" id="gMN-8c-xXE"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -235,13 +235,13 @@
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ps0-LX-pwd" kind="show" identifier="Select Transaction" id="3EC-Yu-RkX">
+                                    <segue destination="ps0-LX-pwd" kind="show" identifier="Select Category" id="3EC-Yu-RkX">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
@@ -259,10 +259,10 @@
             </objects>
             <point key="canvasLocation" x="698" y="1443"/>
         </scene>
-        <!--View Controller-->
+        <!--Category Details View Controller-->
         <scene sceneID="qn7-Ye-vhB">
             <objects>
-                <viewController id="ps0-LX-pwd" sceneMemberID="viewController">
+                <viewController id="ps0-LX-pwd" customClass="CategoryDetailsViewController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yot-Hp-QJb"/>
                         <viewControllerLayoutGuide type="bottom" id="FxY-5t-F4m"/>
@@ -270,9 +270,25 @@
                     <view key="view" contentMode="scaleToFill" id="1cF-bx-Vlh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transportation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43T-cg-v8g">
+                                <rect key="frame" x="16" y="72" width="288" height="22"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="43T-cg-v8g" firstAttribute="top" secondItem="Yot-Hp-QJb" secondAttribute="bottom" constant="8" id="0c9-la-xan"/>
+                            <constraint firstItem="43T-cg-v8g" firstAttribute="leading" secondItem="1cF-bx-Vlh" secondAttribute="leadingMargin" id="Gyi-Fg-o9D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="43T-cg-v8g" secondAttribute="trailing" id="L9K-I5-xyU"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="categoryNameLabel" destination="43T-cg-v8g" id="y1I-CM-H2W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SQD-XS-b3y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,10 +314,10 @@
             </objects>
             <point key="canvasLocation" x="280" y="1443"/>
         </scene>
-        <!--View Controller-->
+        <!--Account Details View Controller-->
         <scene sceneID="3cN-Sk-kH0">
             <objects>
-                <viewController id="Gkm-uB-aF1" sceneMemberID="viewController">
+                <viewController id="Gkm-uB-aF1" customClass="AccountDetailsViewController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="flk-KE-HPS"/>
                         <viewControllerLayoutGuide type="bottom" id="HRt-Mm-7Kr"/>
@@ -310,10 +326,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy New Car" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-TB-axQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-TB-axQ">
                                 <rect key="frame" x="16" y="72" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -326,8 +342,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="nameLabel" destination="J6N-TB-axQ" id="p1l-P1-zoj"/>
-                        <outlet property="transactionNameLabel" destination="J6N-TB-axQ" id="ycf-cj-VJY"/>
+                        <outlet property="accountNameLabel" destination="J6N-TB-axQ" id="09I-nd-TJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zr8-wd-Neg" userLabel="First Responder" sceneMemberID="firstResponder"/>

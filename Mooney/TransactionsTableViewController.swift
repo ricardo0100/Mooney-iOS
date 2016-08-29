@@ -9,50 +9,25 @@
 import UIKit
 import CoreData
 
-class TransactionsTableViewController: UITableViewController {
+class TransactionsTableViewController: CoreDataTableViewController {
     
-    let app = UIApplication.sharedApplication().delegate as! AppDelegate
-    
-    var transactions: [Transaction] = [] {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        loadTransactions()
-    }
-    
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transactions.count
+    override var entityName: String? {
+        return "Transaction"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Transaction Cell", forIndexPath: indexPath)
-        let transaction = transactions[indexPath.row]
-        cell.textLabel?.text = transaction.name
+        if let results = fetchedResultsController {
+            cell.textLabel?.text = results.objectAtIndexPath(indexPath).name
+        }
         return cell
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "Select Transaction" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let selectedTransaction = transactions[indexPath.row]
-                let viewController = segue.destinationViewController as! TransactionDetailsViewController
-                viewController.transactionModel = selectedTransaction
-            }
+            let destination = segue.destinationViewController as! TransactionDetailsViewController
+            destination.transactionModel = fetchedResultsController!.objectAtIndexPath(tableView.indexPathForSelectedRow!) as? Transaction
         }
     }
     
-    func loadTransactions() {
-        let fetchRequest = NSFetchRequest(entityName: "Transaction")
-        do {
-            let results = try app.managedObjectContext.executeFetchRequest(fetchRequest)
-            transactions = results as! [Transaction]
-        } catch let error as NSError {
-            print("Could not fetch \(error), \(error.userInfo)")
-        }
-    }
-
 }

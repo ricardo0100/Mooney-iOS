@@ -1,5 +1,5 @@
 //
-//  Category+CoreDataProperties.swift
+//  BaseEntity+CoreDataProperties.swift
 //  Mooney
 //
 //  Created by Ricardo Gehrke Filho on 29/08/16.
@@ -12,8 +12,11 @@
 import Foundation
 import CoreData
 
-extension Category {
+extension BaseEntity {
 
-    @NSManaged var transactions: NSSet?
+    @NSManaged var name: String?
+    @NSManaged var creation: NSDate?
+    @NSManaged var update: NSDate?
+    @NSManaged var removed: NSNumber?
 
 }

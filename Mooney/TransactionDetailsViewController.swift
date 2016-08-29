@@ -23,10 +23,12 @@ class TransactionDetailsViewController: UIViewController {
     }
     
     func updateUIWithTransaction() {
-        transactionNameLabel.text = transactionModel?.name
-        transactionValueLabel.text = String(format: "R$ %.2f", transactionModel!.value! as Double)
-        transactionAccountLabel.text = transactionModel?.account?.name
-        transactionCategoryLabel.text = transactionModel?.category?.name
+        if let transaction = transactionModel {
+            transactionNameLabel.text = transaction.name
+            transactionValueLabel.text = String(format: "R$ %.2f", transaction.value! as Double)
+            transactionAccountLabel.text = transaction.account?.name
+            transactionCategoryLabel.text = transaction.category?.name
+        }
     }
     
 }
