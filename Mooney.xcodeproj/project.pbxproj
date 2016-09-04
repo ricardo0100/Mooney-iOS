@@ -15,8 +15,16 @@
 		BA200FD31D73EB7E00607A94 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCB1D73EB7E00607A94 /* Transaction.swift */; };
 		BA200FD41D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCC1D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift */; };
 		BA200FD51D73EB7E00607A94 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCD1D73EB7E00607A94 /* BaseEntity.swift */; };
+		BA4B06261D7B10990000FEF5 /* CoreDataEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */; };
+		BA4B06281D7B26B90000FEF5 /* CoreDataDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */; };
 		BA4CA6D31D7463FF002F80D6 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CA6D21D7463FE002F80D6 /* AccountDetailsViewController.swift */; };
 		BA4CA6D51D746425002F80D6 /* CategoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CA6D41D746425002F80D6 /* CategoryDetailsViewController.swift */; };
+		BA5235501D7CD603005B9BB5 /* AccountEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA52354F1D7CD603005B9BB5 /* AccountEditViewController.swift */; };
+		BA5235521D7CD742005B9BB5 /* CategoryEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5235511D7CD742005B9BB5 /* CategoryEditViewController.swift */; };
+		BA73C6021D7B0E1B004ECDB3 /* TransactionEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA73C6011D7B0E1B004ECDB3 /* TransactionEditViewController.swift */; };
+		BA888D401D7B09BC00B22CF4 /* Transactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA888D3F1D7B09BC00B22CF4 /* Transactions.storyboard */; };
+		BA888D421D7B0A4500B22CF4 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA888D411D7B0A4500B22CF4 /* Categories.storyboard */; };
+		BA888D441D7B0AAD00B22CF4 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA888D431D7B0AAD00B22CF4 /* Accounts.storyboard */; };
 		BAA1412A1D73168E002A2C10 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA141291D73168E002A2C10 /* CoreDataTableViewController.swift */; };
 		BAC4D38E1D6533CF0042C774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */; };
 		BAC4D3901D6533CF0042C774 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D38F1D6533CF0042C774 /* TransactionsTableViewController.swift */; };
@@ -24,7 +32,7 @@
 		BAC4D3961D6533CF0042C774 /* Mooney.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3941D6533CF0042C774 /* Mooney.xcdatamodeld */; };
 		BAC4D3981D6533CF0042C774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAC4D3971D6533CF0042C774 /* Assets.xcassets */; };
 		BAC4D39B1D6533CF0042C774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4D3991D6533CF0042C774 /* LaunchScreen.storyboard */; };
-		BAC4D3B01D655DB30042C774 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3AF1D655DB30042C774 /* Model.swift */; };
+		BAC4D3B01D655DB30042C774 /* CoreDataUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D3AF1D655DB30042C774 /* CoreDataUtils.swift */; };
 		BADA7B211D6BEBB700F28FD0 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */; };
 		BAE5E89E1D6DDF200084BDE3 /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */; };
 		BAE5E8A31D6DE08B0084BDE3 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */; };
@@ -39,8 +47,16 @@
 		BA200FCB1D73EB7E00607A94 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BA200FCC1D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA200FCD1D73EB7E00607A94 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataEditViewController.swift; sourceTree = "<group>"; };
+		BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDetailsViewController.swift; sourceTree = "<group>"; };
 		BA4CA6D21D7463FE002F80D6 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
 		BA4CA6D41D746425002F80D6 /* CategoryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDetailsViewController.swift; sourceTree = "<group>"; };
+		BA52354F1D7CD603005B9BB5 /* AccountEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountEditViewController.swift; sourceTree = "<group>"; };
+		BA5235511D7CD742005B9BB5 /* CategoryEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEditViewController.swift; sourceTree = "<group>"; };
+		BA73C6011D7B0E1B004ECDB3 /* TransactionEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionEditViewController.swift; sourceTree = "<group>"; };
+		BA888D3F1D7B09BC00B22CF4 /* Transactions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Transactions.storyboard; sourceTree = "<group>"; };
+		BA888D411D7B0A4500B22CF4 /* Categories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		BA888D431D7B0AAD00B22CF4 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
 		BAA141291D73168E002A2C10 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
 		BAC4D38A1D6533CF0042C774 /* Mooney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +66,7 @@
 		BAC4D3971D6533CF0042C774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BAC4D39A1D6533CF0042C774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAC4D39C1D6533CF0042C774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BAC4D3AF1D655DB30042C774 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		BAC4D3AF1D655DB30042C774 /* CoreDataUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
 		BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
 		BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
 		BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
@@ -67,12 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BAA1412B1D732A17002A2C10 /* CoreDataTableViewController */ = {
+		BAA1412B1D732A17002A2C10 /* CommonViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				BAA141291D73168E002A2C10 /* CoreDataTableViewController.swift */,
+				BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */,
+				BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */,
 			);
-			name = CoreDataTableViewController;
+			name = CommonViewControllers;
 			sourceTree = "<group>";
 		};
 		BAC4D3811D6533CF0042C774 = {
@@ -98,7 +116,7 @@
 				BAE5E8A01D6DDFA20084BDE3 /* Accounts */,
 				BAE5E8A11D6DE06E0084BDE3 /* Categories */,
 				BAC4D3AE1D655A600042C774 /* Model */,
-				BAA1412B1D732A17002A2C10 /* CoreDataTableViewController */,
+				BAA1412B1D732A17002A2C10 /* CommonViewControllers */,
 				BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */,
 				BAC4D3911D6533CF0042C774 /* Main.storyboard */,
 				BAC4D3971D6533CF0042C774 /* Assets.xcassets */,
@@ -120,7 +138,7 @@
 				BA200FCB1D73EB7E00607A94 /* Transaction.swift */,
 				BA200FCC1D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift */,
 				BA200FCD1D73EB7E00607A94 /* BaseEntity.swift */,
-				BAC4D3AF1D655DB30042C774 /* Model.swift */,
+				BAC4D3AF1D655DB30042C774 /* CoreDataUtils.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -130,6 +148,8 @@
 			children = (
 				BAC4D38F1D6533CF0042C774 /* TransactionsTableViewController.swift */,
 				BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */,
+				BA73C6011D7B0E1B004ECDB3 /* TransactionEditViewController.swift */,
+				BA888D3F1D7B09BC00B22CF4 /* Transactions.storyboard */,
 			);
 			name = Transactions;
 			sourceTree = "<group>";
@@ -139,6 +159,8 @@
 			children = (
 				BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */,
 				BA4CA6D21D7463FE002F80D6 /* AccountDetailsViewController.swift */,
+				BA52354F1D7CD603005B9BB5 /* AccountEditViewController.swift */,
+				BA888D431D7B0AAD00B22CF4 /* Accounts.storyboard */,
 			);
 			name = Accounts;
 			sourceTree = "<group>";
@@ -148,6 +170,8 @@
 			children = (
 				BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */,
 				BA4CA6D41D746425002F80D6 /* CategoryDetailsViewController.swift */,
+				BA5235511D7CD742005B9BB5 /* CategoryEditViewController.swift */,
+				BA888D411D7B0A4500B22CF4 /* Categories.storyboard */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -210,9 +234,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA888D421D7B0A4500B22CF4 /* Categories.storyboard in Resources */,
 				BAC4D39B1D6533CF0042C774 /* LaunchScreen.storyboard in Resources */,
+				BA888D441D7B0AAD00B22CF4 /* Accounts.storyboard in Resources */,
 				BAC4D3981D6533CF0042C774 /* Assets.xcassets in Resources */,
 				BAC4D3931D6533CF0042C774 /* Main.storyboard in Resources */,
+				BA888D401D7B09BC00B22CF4 /* Transactions.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,8 +251,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA200FD31D73EB7E00607A94 /* Transaction.swift in Sources */,
+				BA4B06281D7B26B90000FEF5 /* CoreDataDetailsViewController.swift in Sources */,
 				BA4CA6D31D7463FF002F80D6 /* AccountDetailsViewController.swift in Sources */,
 				BAA1412A1D73168E002A2C10 /* CoreDataTableViewController.swift in Sources */,
+				BA5235501D7CD603005B9BB5 /* AccountEditViewController.swift in Sources */,
 				BA200FD01D73EB7E00607A94 /* Account+CoreDataProperties.swift in Sources */,
 				BA200FD51D73EB7E00607A94 /* BaseEntity.swift in Sources */,
 				BA200FCF1D73EB7E00607A94 /* Category.swift in Sources */,
@@ -233,14 +262,17 @@
 				BAE5E8A31D6DE08B0084BDE3 /* CategoriesTableViewController.swift in Sources */,
 				BA200FD11D73EB7E00607A94 /* Account.swift in Sources */,
 				BAE5E89E1D6DDF200084BDE3 /* AccountsTableViewController.swift in Sources */,
+				BA4B06261D7B10990000FEF5 /* CoreDataEditViewController.swift in Sources */,
 				BAC4D3901D6533CF0042C774 /* TransactionsTableViewController.swift in Sources */,
 				BAC4D38E1D6533CF0042C774 /* AppDelegate.swift in Sources */,
-				BAC4D3B01D655DB30042C774 /* Model.swift in Sources */,
+				BAC4D3B01D655DB30042C774 /* CoreDataUtils.swift in Sources */,
 				BA4CA6D51D746425002F80D6 /* CategoryDetailsViewController.swift in Sources */,
 				BAC4D3961D6533CF0042C774 /* Mooney.xcdatamodeld in Sources */,
+				BA73C6021D7B0E1B004ECDB3 /* TransactionEditViewController.swift in Sources */,
 				BADA7B211D6BEBB700F28FD0 /* TransactionDetailsViewController.swift in Sources */,
 				BA200FD21D73EB7E00607A94 /* Transaction+CoreDataProperties.swift in Sources */,
 				BA200FD41D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift in Sources */,
+				BA5235521D7CD742005B9BB5 /* CategoryEditViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

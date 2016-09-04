@@ -8,15 +8,19 @@
 
 import UIKit
 
-class AccountDetailsViewController: UIViewController {
+class AccountDetailsViewController: CoreDataDetailsViewController, CoreDataDetailViewControllerDelegate {
     
     @IBOutlet weak var accountNameLabel: UILabel!
     
-    var accountModel: Account?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let account = accountModel {
+        delegate = self
+    }
+    
+    //MARK: CoreDataDetailViewControllerDelegate
+    
+    func reloadViewDataWithObject(object: BaseEntity) {
+        if let account = object as? Account {
             accountNameLabel.text = account.name
         }
     }

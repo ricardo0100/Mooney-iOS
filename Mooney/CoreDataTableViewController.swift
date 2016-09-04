@@ -15,26 +15,16 @@ class CoreDataTableViewController: UITableViewController {
         return nil
     }
     
-    var cellIdentifier: String {
-        return "Cell"
-    }
-    
     var fetchedResultsController: NSFetchedResultsController?
-    
-    let managedObjectContext: NSManagedObjectContext = {
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        return appDelegate.managedObjectContext
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: cellIdentifier)
         if let entity = entityName {
             let fetchRequest = NSFetchRequest(entityName: entity)
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
             fetchedResultsController = NSFetchedResultsController(
                 fetchRequest: fetchRequest,
-                managedObjectContext: managedObjectContext,
+                managedObjectContext: AppDelegate.sharedAppDelegate().managedObjectContext,
                 sectionNameKeyPath: nil,
                 cacheName: nil)
         }
@@ -43,6 +33,7 @@ class CoreDataTableViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         performFetch()
+        tableView.reloadData()
     }
     
     func performFetch() {
@@ -76,11 +67,18 @@ class CoreDataTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         if let results = fetchedResultsController {
             cell.textLabel?.text = results.objectAtIndexPath(indexPath).name
         }
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "Select" {
+            let destination = segue.destinationViewController as! CoreDataDetailsViewController
+            destination.object = fetchedResultsController!.objectAtIndexPath(tableView.indexPathForSelectedRow!) as? BaseEntity
+        }
     }
     
 }

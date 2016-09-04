@@ -8,15 +8,19 @@
 
 import UIKit
 
-class CategoryDetailsViewController: UIViewController {
+class CategoryDetailsViewController: CoreDataDetailsViewController, CoreDataDetailViewControllerDelegate {
     
     @IBOutlet weak var categoryNameLabel: UILabel!
     
-    var categoryModel: Category?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let category = categoryModel {
+        delegate = self
+    }
+    
+    //MARK: CoreDataDetailViewControllerDelegate
+    
+    func reloadViewDataWithObject(object: BaseEntity) {
+        if let category = object as? Category {
             categoryNameLabel.text = category.name
         }
     }

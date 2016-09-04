@@ -15,22 +15,4 @@ class CategoriesTableViewController: CoreDataTableViewController {
         return "Category"
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Category Cell", forIndexPath: indexPath)
-        if let results = fetchedResultsController {
-            cell.textLabel?.text = results.objectAtIndexPath(indexPath).name
-        }
-        return cell
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "Select Category" {
-            if let results = fetchedResultsController {
-                let category = results.objectAtIndexPath(tableView.indexPathForSelectedRow!) as! Category
-                let destination = segue.destinationViewController as! CategoryDetailsViewController
-                destination.categoryModel = category
-            }
-        }
-    }
-
 }

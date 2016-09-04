@@ -8,26 +8,26 @@
 
 import UIKit
 
-class TransactionDetailsViewController: UIViewController {
+class TransactionDetailsViewController: CoreDataDetailsViewController, CoreDataDetailViewControllerDelegate {
 
     @IBOutlet weak var transactionNameLabel: UILabel!
     @IBOutlet weak var transactionAccountLabel: UILabel!
     @IBOutlet weak var transactionCategoryLabel: UILabel!
     @IBOutlet weak var transactionValueLabel: UILabel!
     
-    var transactionModel: Transaction?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        updateUIWithTransaction()
+        self.delegate = self
     }
     
-    func updateUIWithTransaction() {
-        if let transaction = transactionModel {
+    //MARK: CoreDataDetailViewControllerDelegate
+    
+    func reloadViewDataWithObject(object: BaseEntity) {
+        if let transaction = object as? Transaction {
             transactionNameLabel.text = transaction.name
-            transactionValueLabel.text = String(format: "R$ %.2f", transaction.value! as Double)
             transactionAccountLabel.text = transaction.account?.name
             transactionCategoryLabel.text = transaction.category?.name
+            transactionValueLabel.text = "R$ \(transaction.value! as Double)"
         }
     }
     

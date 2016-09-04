@@ -15,23 +15,4 @@ class AccountsTableViewController: CoreDataTableViewController {
         return "Account"
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Account Cell", forIndexPath: indexPath)
-        if let results = fetchedResultsController {
-            cell.textLabel?.text = results.objectAtIndexPath(indexPath).name
-        }
-        return cell
-    }
-
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "Select Account" {
-            if let results = fetchedResultsController {
-                let account = results.objectAtIndexPath(tableView.indexPathForSelectedRow!) as! Account
-                let destination = segue.destinationViewController as! AccountDetailsViewController
-                destination.accountModel = account
-            }
-        }
-    }
-    
 }
