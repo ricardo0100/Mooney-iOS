@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Categories Table View Controller-->
+        <!--Categories-->
         <scene sceneID="yUy-mM-mBt">
             <objects>
                 <tableViewController id="9Tq-SA-uor" customClass="CategoriesTableViewController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
@@ -43,7 +43,7 @@
                             <outlet property="delegate" destination="9Tq-SA-uor" id="9N9-62-eR5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="n5n-0k-J0D">
+                    <navigationItem key="navigationItem" title="Categories" id="n5n-0k-J0D">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="xjT-gk-2OA">
                             <connections>
                                 <segue destination="LPy-gn-CUO" kind="presentation" id="yft-0I-a6q"/>
@@ -202,6 +202,6 @@
         <image name="ic_view_week" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hkw-1f-gKm"/>
+        <segue reference="yft-0I-a6q"/>
     </inferredMetricsTieBreakers>
 </document>

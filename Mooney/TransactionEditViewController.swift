@@ -12,7 +12,7 @@ import CoreData
 class TransactionEditViewController: CoreDataEditViewController, CoreDataEditViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet weak var valueTextField: CurrencyTextField!
     @IBOutlet weak var accountPickerView: UIPickerView!
     @IBOutlet weak var categoryPickerView: UIPickerView!
     
@@ -34,7 +34,9 @@ class TransactionEditViewController: CoreDataEditViewController, CoreDataEditVie
     func prepareObjectForEdition(object: BaseEntity) {
         if let transaction = object as? Transaction {
             nameTextField.text = transaction.name
-            valueTextField.text = transaction.value?.stringValue
+            if let value = transaction.value {
+                valueTextField.setValue(value)
+            }
         }
     }
     
@@ -46,7 +48,7 @@ class TransactionEditViewController: CoreDataEditViewController, CoreDataEditVie
     func prepareObjectForSaving() -> Bool {
         if let transaction = object as! Transaction? {
             transaction.name = nameTextField.text
-            transaction.value = NSDecimalNumber(string: valueTextField.text)
+            transaction.value = valueTextField.getValue()
             transaction.account = accounts[accountPickerView.selectedRowInComponent(0)] as? Account
             transaction.category = categories[categoryPickerView.selectedRowInComponent(0)] as? Category
             return true

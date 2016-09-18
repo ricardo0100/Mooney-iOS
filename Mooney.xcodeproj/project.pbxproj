@@ -36,6 +36,7 @@
 		BADA7B211D6BEBB700F28FD0 /* TransactionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */; };
 		BAE5E89E1D6DDF200084BDE3 /* AccountsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */; };
 		BAE5E8A31D6DE08B0084BDE3 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */; };
+		BAFE3B8B1D7EF65400764013 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE3B8A1D7EF65400764013 /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
 		BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
 		BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		BAFE3B8A1D7EF65400764013 /* CurrencyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,14 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BAA1412B1D732A17002A2C10 /* CommonViewControllers */ = {
+		BAA1412B1D732A17002A2C10 /* Common View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				BAA141291D73168E002A2C10 /* CoreDataTableViewController.swift */,
 				BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */,
 				BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */,
 			);
-			name = CommonViewControllers;
+			name = "Common View Controllers";
 			sourceTree = "<group>";
 		};
 		BAC4D3811D6533CF0042C774 = {
@@ -112,17 +114,13 @@
 		BAC4D38C1D6533CF0042C774 /* Mooney */ = {
 			isa = PBXGroup;
 			children = (
+				BAFE3B881D7EF61500764013 /* App */,
 				BAE5E89F1D6DDF9C0084BDE3 /* Transactions */,
 				BAE5E8A01D6DDFA20084BDE3 /* Accounts */,
 				BAE5E8A11D6DE06E0084BDE3 /* Categories */,
 				BAC4D3AE1D655A600042C774 /* Model */,
-				BAA1412B1D732A17002A2C10 /* CommonViewControllers */,
-				BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */,
-				BAC4D3911D6533CF0042C774 /* Main.storyboard */,
-				BAC4D3971D6533CF0042C774 /* Assets.xcassets */,
-				BAC4D3991D6533CF0042C774 /* LaunchScreen.storyboard */,
-				BAC4D39C1D6533CF0042C774 /* Info.plist */,
-				BAC4D3941D6533CF0042C774 /* Mooney.xcdatamodeld */,
+				BAA1412B1D732A17002A2C10 /* Common View Controllers */,
+				BAFE3B891D7EF61E00764013 /* Common Views */,
 			);
 			path = Mooney;
 			sourceTree = "<group>";
@@ -174,6 +172,27 @@
 				BA888D411D7B0A4500B22CF4 /* Categories.storyboard */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		BAFE3B881D7EF61500764013 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */,
+				BAC4D39C1D6533CF0042C774 /* Info.plist */,
+				BAC4D3941D6533CF0042C774 /* Mooney.xcdatamodeld */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		BAFE3B891D7EF61E00764013 /* Common Views */ = {
+			isa = PBXGroup;
+			children = (
+				BAC4D3911D6533CF0042C774 /* Main.storyboard */,
+				BAC4D3971D6533CF0042C774 /* Assets.xcassets */,
+				BAC4D3991D6533CF0042C774 /* LaunchScreen.storyboard */,
+				BAFE3B8A1D7EF65400764013 /* CurrencyTextField.swift */,
+			);
+			name = "Common Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +275,7 @@
 				BAA1412A1D73168E002A2C10 /* CoreDataTableViewController.swift in Sources */,
 				BA5235501D7CD603005B9BB5 /* AccountEditViewController.swift in Sources */,
 				BA200FD01D73EB7E00607A94 /* Account+CoreDataProperties.swift in Sources */,
+				BAFE3B8B1D7EF65400764013 /* CurrencyTextField.swift in Sources */,
 				BA200FD51D73EB7E00607A94 /* BaseEntity.swift in Sources */,
 				BA200FCF1D73EB7E00607A94 /* Category.swift in Sources */,
 				BA200FCE1D73EB7E00607A94 /* Category+CoreDataProperties.swift in Sources */,
@@ -387,7 +407,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mooney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricardo0100.Mooney;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ricardofilho.RichRobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -398,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mooney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.ricardo0100.Mooney;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.ricardofilho.RichRobot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

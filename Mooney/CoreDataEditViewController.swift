@@ -24,6 +24,11 @@ class CoreDataEditViewController: UIViewController {
         guard let viewDelegate = delegate else {
             return
         }
+        
+        if object == nil {
+            viewDelegate.prepareNewObjectForEdition()
+        }
+        
         if(viewDelegate.prepareObjectForSaving()) {
             try! managedObjectContext.save()
         }
@@ -40,8 +45,6 @@ class CoreDataEditViewController: UIViewController {
         }
         if let data = object {
             viewDelegate.prepareObjectForEdition(data)
-        } else {
-            viewDelegate.prepareNewObjectForEdition()
         }
     }
 

@@ -10,35 +10,7 @@ import UIKit
 import CoreData
 
 class CoreDataUtils {
-//    
-//    let app = UIApplication.sharedApplication().delegate as! AppDelegate
-//    
-//    func createCategoryExample() -> Category {
-//        let entity =  NSEntityDescription.entityForName("Category", inManagedObjectContext:app.managedObjectContext)
-//        let category = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: app.managedObjectContext) as! Category
-//        category.name = "Supermarket"
-//        try! app.managedObjectContext.save()
-//        return category
-//    }
-//    
-//    func createAccountExample() -> Account {
-//        let entity =  NSEntityDescription.entityForName("Account", inManagedObjectContext:app.managedObjectContext)
-//        let account = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: app.managedObjectContext) as! Account
-//        account.name = "Sirius Bank"
-//        try! app.managedObjectContext.save()
-//        return account
-//    }
-//    
-//    func createTransactionExample() {
-//        let entity =  NSEntityDescription.entityForName("Transaction", inManagedObjectContext:app.managedObjectContext)
-//        let transaction = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: app.managedObjectContext) as! Transaction
-//        transaction.name = "Food for the week"
-//        transaction.value = 24.99
-//        transaction.category = createCategoryExample()
-//        transaction.account = createAccountExample()
-//        try! app.managedObjectContext.save()
-//    }
-//    
+
     static func retrieveAllObjectsWithEntityName(entityName: String) -> [AnyObject] {
         let managedObjectContext = AppDelegate.sharedAppDelegate().managedObjectContext
         let fetchrequest = NSFetchRequest(entityName: entityName)
