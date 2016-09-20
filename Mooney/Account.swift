@@ -15,7 +15,11 @@ class Account: BaseEntity {
     func sumOfAllTransactions() -> NSDecimalNumber {
         var sum = 0.0
         for transaction in transactionsArray() {
-            sum = sum + transaction.value!.doubleValue
+            if transaction.type == TransactionTypes.Credit.rawValue {
+                sum = sum + transaction.value!.doubleValue
+            } else {
+                sum = sum - transaction.value!.doubleValue
+            }
         }
         return NSDecimalNumber(double: sum)
     }

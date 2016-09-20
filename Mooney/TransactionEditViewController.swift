@@ -35,8 +35,12 @@ class TransactionEditViewController: KeyboardScrollCoreDataEditViewController, C
     func prepareObjectForEdition(object: BaseEntity) {
         if let transaction = object as? Transaction {
             nameTextField.text = transaction.name
-            if let value = transaction.value {
-                valueTextField.setValue(value)
+            valueTextField.setValue(transaction.value!)
+            
+            if TransactionTypes.fromString(transaction.type!) == TransactionTypes.Credit {
+                transactionTypeSegmentedControl.selectedSegmentIndex = 0
+            } else {
+                transactionTypeSegmentedControl.selectedSegmentIndex = 1
             }
         }
     }
@@ -52,6 +56,11 @@ class TransactionEditViewController: KeyboardScrollCoreDataEditViewController, C
             transaction.value = valueTextField.getValue()
             transaction.account = accounts[accountPickerView.selectedRowInComponent(0)] as? Account
             transaction.category = categories[categoryPickerView.selectedRowInComponent(0)] as? Category
+            if transactionTypeSegmentedControl.selectedSegmentIndex == 0 {
+                transaction.type = TransactionTypes.Credit.rawValue
+            } else {
+                transaction.type = TransactionTypes.Debit.rawValue
+            }
             return true
         }
         return false

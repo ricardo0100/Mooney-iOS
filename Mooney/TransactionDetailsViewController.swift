@@ -25,10 +25,15 @@ class TransactionDetailsViewController: CoreDataDetailsViewController, CoreDataD
     func reloadViewDataWithObject(object: BaseEntity) {
         if let transaction = object as? Transaction {
             transactionNameLabel.text = transaction.name
-            transactionAccountLabel.text = transaction.account?.name
+            transactionAccountLabel.text = accountTextForTransaction(transaction)
             transactionCategoryLabel.text = transaction.category?.name
             transactionValueLabel.text = transaction.value?.toCurrencyString()
         }
+    }
+    
+    func accountTextForTransaction(transaction: Transaction) -> String {
+        let type = TransactionTypes.fromString(transaction.type!)
+        return "\(type.rawValue) in \(transaction.account!.name!)"
     }
     
 }

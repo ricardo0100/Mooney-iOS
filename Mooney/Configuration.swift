@@ -11,6 +11,15 @@ import Foundation
 enum TransactionTypes: String {
     case Debit = "Debit"
     case Credit = "Credit"
+    
+    static func fromString(string: String) -> TransactionTypes {
+        switch string {
+        case Credit.rawValue:
+            return Credit
+        default:
+            return Debit
+        }
+    }
 }
 
 class Configuration {
