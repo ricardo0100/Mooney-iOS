@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Accounts-->
@@ -71,7 +70,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zak-hV-orV">
                                 <rect key="frame" x="8" y="72" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cd0-iH-0oS">
@@ -122,18 +121,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-bW-qhb">
-                                <rect key="frame" x="16" y="72" width="288" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Bank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEG-bW-qhb">
+                                <rect key="frame" x="8" y="72" width="304" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ke-Bk-T8d">
+                                <rect key="frame" x="8" y="490" width="304" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Current ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="R$ 44,00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="22" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rt2-aq-8V4">
+                                <rect key="frame" x="0.0" y="102" width="320" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Extract Transaction" id="KXB-zk-igj" customClass="ExtractTransactionTableViewCell" customModule="Mooney" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="22"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KXB-zk-igj" id="guA-Ww-zGK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gym" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZG-au-mCK">
+                                                    <rect key="frame" x="16" y="2" width="30" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 159,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTV-Xs-G5L">
+                                                    <rect key="frame" x="244" y="2" width="68" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="MTV-Xs-G5L" secondAttribute="trailing" constant="8" id="IuD-Z6-5BC"/>
+                                                <constraint firstItem="hZG-au-mCK" firstAttribute="centerY" secondItem="guA-Ww-zGK" secondAttribute="centerY" id="oZS-8H-0BZ"/>
+                                                <constraint firstItem="hZG-au-mCK" firstAttribute="leading" secondItem="guA-Ww-zGK" secondAttribute="leading" constant="16" id="sHT-aN-v8I"/>
+                                                <constraint firstItem="MTV-Xs-G5L" firstAttribute="centerY" secondItem="guA-Ww-zGK" secondAttribute="centerY" id="yX9-wr-G8x"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="hZG-au-mCK" id="Vzl-VP-UEv"/>
+                                            <outlet property="valueLabel" destination="MTV-Xs-G5L" id="Px9-EB-ZNF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="FEG-bW-qhb" secondAttribute="trailing" id="7nL-0A-QfA"/>
-                            <constraint firstItem="FEG-bW-qhb" firstAttribute="leading" secondItem="zzh-6W-sT4" secondAttribute="leadingMargin" id="BAI-aW-lH2"/>
-                            <constraint firstItem="FEG-bW-qhb" firstAttribute="top" secondItem="Hi2-db-va2" secondAttribute="bottom" constant="8" id="lLY-Tl-3X8"/>
+                            <constraint firstItem="rt2-aq-8V4" firstAttribute="top" secondItem="FEG-bW-qhb" secondAttribute="bottom" constant="8" id="21D-Rm-VY1"/>
+                            <constraint firstItem="FEG-bW-qhb" firstAttribute="leading" secondItem="zzh-6W-sT4" secondAttribute="leading" constant="8" id="3F9-1t-wUp"/>
+                            <constraint firstItem="4Gc-lL-K6R" firstAttribute="top" secondItem="8ke-Bk-T8d" secondAttribute="bottom" constant="8" id="4Ul-ZI-x5y"/>
+                            <constraint firstAttribute="trailing" secondItem="rt2-aq-8V4" secondAttribute="trailing" id="FAo-jZ-18d"/>
+                            <constraint firstItem="FEG-bW-qhb" firstAttribute="top" secondItem="Hi2-db-va2" secondAttribute="bottom" constant="8" id="Lxa-Zb-iYn"/>
+                            <constraint firstItem="rt2-aq-8V4" firstAttribute="leading" secondItem="zzh-6W-sT4" secondAttribute="leading" id="Mue-z1-I6g"/>
+                            <constraint firstItem="8ke-Bk-T8d" firstAttribute="leading" secondItem="zzh-6W-sT4" secondAttribute="leading" constant="8" id="alv-l1-pPf"/>
+                            <constraint firstItem="8ke-Bk-T8d" firstAttribute="top" secondItem="rt2-aq-8V4" secondAttribute="bottom" constant="8" id="hiO-gX-ym7"/>
+                            <constraint firstAttribute="trailing" secondItem="8ke-Bk-T8d" secondAttribute="trailing" constant="8" id="hno-7y-wcE"/>
+                            <constraint firstAttribute="trailing" secondItem="FEG-bW-qhb" secondAttribute="trailing" constant="8" id="qDC-xr-EiS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Ie-j4-r58">
@@ -146,6 +210,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="accountNameLabel" destination="FEG-bW-qhb" id="bEH-Lx-N3o"/>
+                        <outlet property="extractTableView" destination="rt2-aq-8V4" id="aWc-Ze-ub8"/>
+                        <outlet property="totalLabel" destination="8ke-Bk-T8d" id="UCb-5t-MFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sok-72-KCG" userLabel="First Responder" sceneMemberID="firstResponder"/>

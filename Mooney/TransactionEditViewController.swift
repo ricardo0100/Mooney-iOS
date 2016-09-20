@@ -9,12 +9,13 @@
 import UIKit
 import CoreData
 
-class TransactionEditViewController: CoreDataEditViewController, CoreDataEditViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class TransactionEditViewController: KeyboardScrollCoreDataEditViewController, CoreDataEditViewControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var valueTextField: CurrencyTextField!
     @IBOutlet weak var accountPickerView: UIPickerView!
     @IBOutlet weak var categoryPickerView: UIPickerView!
+    @IBOutlet weak var transactionTypeSegmentedControl: UISegmentedControl!
     
     var accounts = CoreDataUtils.retrieveAllObjectsWithEntityName("Account")
     var categories = CoreDataUtils.retrieveAllObjectsWithEntityName("Category")

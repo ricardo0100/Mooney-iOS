@@ -12,6 +12,9 @@ import CoreData
 
 class Transaction: BaseEntity {
 
-// Insert code here to add functionality to your managed object subclass
+    override func awakeFromInsert() {
+        super.awakeFromInsert()
+        type = TransactionTypes.Debit.rawValue
+    }
 
 }

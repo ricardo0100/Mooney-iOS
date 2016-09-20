@@ -17,5 +17,6 @@ extension Transaction {
     @NSManaged var value: NSDecimalNumber?
     @NSManaged var account: Account?
     @NSManaged var category: Category?
+    @NSManaged var type: String?
 
 }

@@ -12,4 +12,10 @@ import CoreData
 
 class BaseEntity: NSManagedObject {
     
+    override func awakeFromInsert() {
+        super.awakeFromInsert()
+        creation = NSDate()
+        update = NSDate()
+    }
+    
 }

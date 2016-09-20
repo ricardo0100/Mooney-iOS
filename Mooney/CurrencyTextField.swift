@@ -11,8 +11,6 @@ import UIKit
 class CurrencyTextField: UITextField, UITextFieldDelegate {
     
     let decimalPlaces = 2
-    let currencyPrefix = "R$"
-    let decimalSeparator = ","
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,27 +28,22 @@ class CurrencyTextField: UITextField, UITextFieldDelegate {
     }
     
     func getValue() -> NSDecimalNumber {
-        var valueString = text?.stringByReplacingOccurrencesOfString(currencyPrefix, withString: "")
-        valueString = valueString!.stringByReplacingOccurrencesOfString(decimalSeparator, withString: ".")
+        var valueString = text?.stringByReplacingOccurrencesOfString(Configuration.currencySymbol, withString: "")
+        valueString = valueString!.stringByReplacingOccurrencesOfString(Configuration.decimalSeparator, withString: ".")
         let value = NSDecimalNumber(string: valueString)
         return value
     }
     
     func setValue(value: NSDecimalNumber) {
-        let formater = NSNumberFormatter()
-        formater.maximumFractionDigits = decimalPlaces
-        formater.minimumFractionDigits = decimalPlaces
-        formater.minimumIntegerDigits = 1
-        formater.decimalSeparator = decimalSeparator
-        let stringValue = formater.stringFromNumber(value)!
-        text = "\(currencyPrefix) \(stringValue)"
+        text = value.toCurrencyString()
     }
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        //Process character concatenation
         var newText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
         newText = newText.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
-        newText = newText.stringByReplacingOccurrencesOfString(decimalSeparator, withString: "")
-        newText = newText.stringByReplacingOccurrencesOfString(currencyPrefix, withString: "")
+        newText = newText.stringByReplacingOccurrencesOfString(Configuration.decimalSeparator, withString: "")
+        newText = newText.stringByReplacingOccurrencesOfString(Configuration.currencySymbol, withString: "")
         newText = newText.stringByReplacingOccurrencesOfString(" ", withString: "")
         let integerNumber = Double(newText)!
         let multiplier = 1 / pow(Double(10), Double(decimalPlaces))

@@ -13,14 +13,15 @@
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Transaction" representedClassName=".Transaction" parentEntity="BaseEntity" syncable="YES">
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transactions" inverseEntity="Category" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-135" positionY="-18" width="128" height="58"/>
-        <element name="Category" positionX="-135" positionY="141" width="128" height="58"/>
-        <element name="Transaction" positionX="61" positionY="24" width="128" height="88"/>
+        <element name="Account" positionX="-135" positionY="-18" width="128" height="60"/>
         <element name="BaseEntity" positionX="-36" positionY="81" width="128" height="103"/>
+        <element name="Category" positionX="-135" positionY="141" width="128" height="58"/>
+        <element name="Transaction" positionX="61" positionY="24" width="128" height="105"/>
     </elements>
 </model>

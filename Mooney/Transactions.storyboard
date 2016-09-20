@@ -39,7 +39,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tgu-sf-zcG" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="368"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="424"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbj-KU-OiE">
                                                 <rect key="frame" x="8" y="8" width="45" height="21"/>
@@ -87,6 +87,13 @@
                                                     <constraint firstAttribute="height" constant="80" id="GNM-Dv-pn8"/>
                                                 </constraints>
                                             </pickerView>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="DD3-Ch-vnP">
+                                                <rect key="frame" x="8" y="376" width="304" height="29"/>
+                                                <segments>
+                                                    <segment title="Credit"/>
+                                                    <segment title="Debit"/>
+                                                </segments>
+                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -105,13 +112,22 @@
                                             <constraint firstItem="fND-Me-KBE" firstAttribute="top" secondItem="ygd-R0-dui" secondAttribute="bottom" constant="8" id="U0z-3q-rCq"/>
                                             <constraint firstItem="AnC-uW-5ZW" firstAttribute="top" secondItem="rBX-wt-8qe" secondAttribute="bottom" constant="8" id="ZMW-1c-hAd"/>
                                             <constraint firstItem="kfi-Lt-tBY" firstAttribute="leading" secondItem="tgu-sf-zcG" secondAttribute="leading" constant="8" id="acR-Qx-JMC"/>
+                                            <constraint firstItem="DD3-Ch-vnP" firstAttribute="top" secondItem="fND-Me-KBE" secondAttribute="bottom" constant="8" id="diT-YH-2FS"/>
                                             <constraint firstItem="ygd-R0-dui" firstAttribute="top" secondItem="wZY-o1-Uql" secondAttribute="bottom" constant="8" id="jR1-Bc-uK6"/>
                                             <constraint firstItem="AnC-uW-5ZW" firstAttribute="leading" secondItem="tgu-sf-zcG" secondAttribute="leading" constant="8" id="nX5-Bc-gyL"/>
                                             <constraint firstAttribute="trailing" secondItem="wZY-o1-Uql" secondAttribute="trailing" id="pCd-ee-oH4"/>
+                                            <constraint firstAttribute="bottom" secondItem="DD3-Ch-vnP" secondAttribute="bottom" constant="20" id="ras-Wr-I1E"/>
+                                            <constraint firstAttribute="trailing" secondItem="DD3-Ch-vnP" secondAttribute="trailing" constant="8" id="s8n-9j-Mxe"/>
                                             <constraint firstItem="rBX-wt-8qe" firstAttribute="leading" secondItem="tgu-sf-zcG" secondAttribute="leading" constant="8" id="wS9-nX-p5o"/>
                                             <constraint firstItem="Shd-bR-uKJ" firstAttribute="top" secondItem="AnC-uW-5ZW" secondAttribute="bottom" constant="8" id="xND-vb-em5"/>
+                                            <constraint firstItem="DD3-Ch-vnP" firstAttribute="leading" secondItem="tgu-sf-zcG" secondAttribute="leading" constant="8" id="yAU-BR-j50"/>
                                             <constraint firstAttribute="trailing" secondItem="rBX-wt-8qe" secondAttribute="trailing" constant="8" id="yay-6v-qv7"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="CnI-uX-XkW"/>
+                                            </mask>
+                                        </variation>
                                     </view>
                                 </subviews>
                                 <constraints>
@@ -149,6 +165,8 @@
                         <outlet property="accountPickerView" destination="wZY-o1-Uql" id="cTD-1T-NQy"/>
                         <outlet property="categoryPickerView" destination="fND-Me-KBE" id="ncS-1o-Qdd"/>
                         <outlet property="nameTextField" destination="rBX-wt-8qe" id="akl-ee-HF3"/>
+                        <outlet property="scrollView" destination="Zbi-sa-oRC" id="69H-oT-RKE"/>
+                        <outlet property="transactionTypeSegmentedControl" destination="DD3-Ch-vnP" id="xoE-Xv-sBi"/>
                         <outlet property="valueTextField" destination="Shd-bR-uKJ" id="WSs-ex-oB1"/>
                     </connections>
                 </viewController>

@@ -19,8 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
-//        Model().createTransactionExample()
+        handleContextWillSaveNotification()
         return true
     }
 
@@ -108,6 +107,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSLog("Unresolved error \(nserror), \(nserror.userInfo)")
                 abort()
             }
+        }
+    }
+    
+    func handleContextWillSaveNotification() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AppDelegate.willSaveNotificationCalled(_:)), name: "NSManagedObjectContextWillSaveNotification", object: nil)
+    }
+    
+    func willSaveNotificationCalled(notification: NSNotification) {
+        let context = notification.object as! NSManagedObjectContext
+        let now = NSDate()
+        
+        for object in context.updatedObjects {
+            (object as! BaseEntity).update = now
         }
     }
 

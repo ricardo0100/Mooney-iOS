@@ -12,6 +12,15 @@ import CoreData
 
 class Account: BaseEntity {
 
-// Insert code here to add functionality to your managed object subclass
-
+    func sumOfAllTransactions() -> NSDecimalNumber {
+        var sum = 0.0
+        for transaction in transactionsArray() {
+            sum = sum + transaction.value!.doubleValue
+        }
+        return NSDecimalNumber(double: sum)
+    }
+    
+    func transactionsArray() -> [Transaction] {
+        return transactions?.allObjects as! [Transaction]
+    }
 }

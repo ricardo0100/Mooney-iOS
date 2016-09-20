@@ -15,6 +15,7 @@
 		BA200FD31D73EB7E00607A94 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCB1D73EB7E00607A94 /* Transaction.swift */; };
 		BA200FD41D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCC1D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift */; };
 		BA200FD51D73EB7E00607A94 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCD1D73EB7E00607A94 /* BaseEntity.swift */; };
+		BA4909351D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4909341D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift */; };
 		BA4B06261D7B10990000FEF5 /* CoreDataEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */; };
 		BA4B06281D7B26B90000FEF5 /* CoreDataDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */; };
 		BA4CA6D31D7463FF002F80D6 /* AccountDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4CA6D21D7463FE002F80D6 /* AccountDetailsViewController.swift */; };
@@ -26,6 +27,9 @@
 		BA888D421D7B0A4500B22CF4 /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA888D411D7B0A4500B22CF4 /* Categories.storyboard */; };
 		BA888D441D7B0AAD00B22CF4 /* Accounts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA888D431D7B0AAD00B22CF4 /* Accounts.storyboard */; };
 		BAA1412A1D73168E002A2C10 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA141291D73168E002A2C10 /* CoreDataTableViewController.swift */; };
+		BAC415291D91D88B00FF8B82 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC415281D91D88B00FF8B82 /* Helpers.swift */; };
+		BAC4152B1D91E19800FF8B82 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4152A1D91E19800FF8B82 /* Configuration.swift */; };
+		BAC4152F1D91F6B400FF8B82 /* KeyboardScrollCoreDataEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4152E1D91F6B400FF8B82 /* KeyboardScrollCoreDataEditViewController.swift */; };
 		BAC4D38E1D6533CF0042C774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */; };
 		BAC4D3901D6533CF0042C774 /* TransactionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC4D38F1D6533CF0042C774 /* TransactionsTableViewController.swift */; };
 		BAC4D3931D6533CF0042C774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC4D3911D6533CF0042C774 /* Main.storyboard */; };
@@ -48,6 +52,7 @@
 		BA200FCB1D73EB7E00607A94 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BA200FCC1D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA200FCD1D73EB7E00607A94 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		BA4909341D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractTransactionTableViewCell.swift; sourceTree = "<group>"; };
 		BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataEditViewController.swift; sourceTree = "<group>"; };
 		BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDetailsViewController.swift; sourceTree = "<group>"; };
 		BA4CA6D21D7463FE002F80D6 /* AccountDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountDetailsViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +64,9 @@
 		BA888D411D7B0A4500B22CF4 /* Categories.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
 		BA888D431D7B0AAD00B22CF4 /* Accounts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Accounts.storyboard; sourceTree = "<group>"; };
 		BAA141291D73168E002A2C10 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTableViewController.swift; sourceTree = "<group>"; };
+		BAC415281D91D88B00FF8B82 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		BAC4152A1D91E19800FF8B82 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		BAC4152E1D91F6B400FF8B82 /* KeyboardScrollCoreDataEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardScrollCoreDataEditViewController.swift; sourceTree = "<group>"; };
 		BAC4D38A1D6533CF0042C774 /* Mooney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mooney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAC4D38F1D6533CF0042C774 /* TransactionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsTableViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +99,7 @@
 				BAA141291D73168E002A2C10 /* CoreDataTableViewController.swift */,
 				BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */,
 				BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */,
+				BAC4152E1D91F6B400FF8B82 /* KeyboardScrollCoreDataEditViewController.swift */,
 			);
 			name = "Common View Controllers";
 			sourceTree = "<group>";
@@ -128,6 +137,7 @@
 		BAC4D3AE1D655A600042C774 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BAC4D3941D6533CF0042C774 /* Mooney.xcdatamodeld */,
 				BA200FC61D73EB7E00607A94 /* Category+CoreDataProperties.swift */,
 				BA200FC71D73EB7E00607A94 /* Category.swift */,
 				BA200FC81D73EB7E00607A94 /* Account+CoreDataProperties.swift */,
@@ -158,6 +168,7 @@
 				BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */,
 				BA4CA6D21D7463FE002F80D6 /* AccountDetailsViewController.swift */,
 				BA52354F1D7CD603005B9BB5 /* AccountEditViewController.swift */,
+				BA4909341D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift */,
 				BA888D431D7B0AAD00B22CF4 /* Accounts.storyboard */,
 			);
 			name = Accounts;
@@ -177,9 +188,10 @@
 		BAFE3B881D7EF61500764013 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */,
 				BAC4D39C1D6533CF0042C774 /* Info.plist */,
-				BAC4D3941D6533CF0042C774 /* Mooney.xcdatamodeld */,
+				BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */,
+				BAC415281D91D88B00FF8B82 /* Helpers.swift */,
+				BAC4152A1D91E19800FF8B82 /* Configuration.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -285,12 +297,16 @@
 				BA4B06261D7B10990000FEF5 /* CoreDataEditViewController.swift in Sources */,
 				BAC4D3901D6533CF0042C774 /* TransactionsTableViewController.swift in Sources */,
 				BAC4D38E1D6533CF0042C774 /* AppDelegate.swift in Sources */,
+				BA4909351D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift in Sources */,
 				BAC4D3B01D655DB30042C774 /* CoreDataUtils.swift in Sources */,
 				BA4CA6D51D746425002F80D6 /* CategoryDetailsViewController.swift in Sources */,
 				BAC4D3961D6533CF0042C774 /* Mooney.xcdatamodeld in Sources */,
+				BAC4152F1D91F6B400FF8B82 /* KeyboardScrollCoreDataEditViewController.swift in Sources */,
 				BA73C6021D7B0E1B004ECDB3 /* TransactionEditViewController.swift in Sources */,
+				BAC4152B1D91E19800FF8B82 /* Configuration.swift in Sources */,
 				BADA7B211D6BEBB700F28FD0 /* TransactionDetailsViewController.swift in Sources */,
 				BA200FD21D73EB7E00607A94 /* Transaction+CoreDataProperties.swift in Sources */,
+				BAC415291D91D88B00FF8B82 /* Helpers.swift in Sources */,
 				BA200FD41D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift in Sources */,
 				BA5235521D7CD742005B9BB5 /* CategoryEditViewController.swift in Sources */,
 			);

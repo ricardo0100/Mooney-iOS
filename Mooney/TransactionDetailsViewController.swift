@@ -27,7 +27,7 @@ class TransactionDetailsViewController: CoreDataDetailsViewController, CoreDataD
             transactionNameLabel.text = transaction.name
             transactionAccountLabel.text = transaction.account?.name
             transactionCategoryLabel.text = transaction.category?.name
-            transactionValueLabel.text = "R$ \(transaction.value! as Double)"
+            transactionValueLabel.text = transaction.value?.toCurrencyString()
         }
     }
     
