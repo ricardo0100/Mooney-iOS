@@ -98,14 +98,14 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
     //MARK: UITableViewDataSource
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if let results = fetchedResultsController, sections = results.sections {
+        if let results = fetchedResultsController, let sections = results.sections {
             return sections.count
         }
         return 0
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let results = fetchedResultsController, sections = results.sections {
+        if let results = fetchedResultsController, let sections = results.sections {
             return sections[section].numberOfObjects
         }
         return 0
@@ -114,7 +114,8 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
         if let results = fetchedResultsController {
-            cell.textLabel?.text = results.objectAtIndexPath(indexPath).name
+            let object = results.objectAtIndexPath(indexPath) as! BaseEntity
+            cell.textLabel?.text = object.name
         }
         return cell
     }
