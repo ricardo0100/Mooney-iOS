@@ -32,7 +32,7 @@ class TransactionEditViewController: KeyboardScrollCoreDataEditViewController, C
     
     //MARK: CoreDataEditViewControllerDelegate
     
-    func prepareObjectForEdition(object: BaseEntity) {
+    func prepareObjectForEdition(_ object: BaseEntity) {
         if let transaction = object as? Transaction {
             nameTextField.text = transaction.name
             valueTextField.setValue(transaction.value!)
@@ -46,16 +46,16 @@ class TransactionEditViewController: KeyboardScrollCoreDataEditViewController, C
     }
     
     func prepareNewObjectForEdition() {
-        let entityDescription = NSEntityDescription.entityForName("Transaction", inManagedObjectContext: managedObjectContext)!
-        object = NSManagedObject(entity: entityDescription, insertIntoManagedObjectContext: managedObjectContext) as! Transaction
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Transaction", in: managedObjectContext)!
+        object = NSManagedObject(entity: entityDescription, insertInto: managedObjectContext) as! Transaction
     }
     
     func prepareObjectForSaving() -> Bool {
         if let transaction = object as! Transaction? {
             transaction.name = nameTextField.text
             transaction.value = valueTextField.getValue()
-            transaction.account = accounts[accountPickerView.selectedRowInComponent(0)] as? Account
-            transaction.category = categories[categoryPickerView.selectedRowInComponent(0)] as? Category
+            transaction.account = accounts[accountPickerView.selectedRow(inComponent: 0)] as? Account
+            transaction.category = categories[categoryPickerView.selectedRow(inComponent: 0)] as? Category
             if transactionTypeSegmentedControl.selectedSegmentIndex == 0 {
                 transaction.type = TransactionTypes.Credit.rawValue
             } else {
@@ -68,11 +68,11 @@ class TransactionEditViewController: KeyboardScrollCoreDataEditViewController, C
     
     //MARK: UIPickerViewDataSource and UIPickerViewDelegate
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == accountPickerView {
             return accounts.count
         } else {
@@ -80,7 +80,7 @@ class TransactionEditViewController: KeyboardScrollCoreDataEditViewController, C
         }
     }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == accountPickerView {
             let account = accounts[row] as! Account
             return account.name

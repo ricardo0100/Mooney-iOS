@@ -21,7 +21,7 @@ class Account: BaseEntity {
                 sum = sum - transaction.value!.doubleValue
             }
         }
-        return NSDecimalNumber(double: sum)
+        return NSDecimalNumber(value: sum as Double)
     }
     
     func transactionsArray() -> [Transaction] {

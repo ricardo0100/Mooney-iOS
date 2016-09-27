@@ -22,7 +22,7 @@ class TransactionDetailsViewController: CoreDataDetailsViewController, CoreDataD
     
     //MARK: CoreDataDetailViewControllerDelegate
     
-    func reloadViewDataWithObject(object: BaseEntity) {
+    func reloadViewDataWithObject(_ object: BaseEntity) {
         if let transaction = object as? Transaction {
             transactionNameLabel.text = transaction.name
             transactionAccountLabel.text = accountTextForTransaction(transaction)
@@ -31,7 +31,7 @@ class TransactionDetailsViewController: CoreDataDetailsViewController, CoreDataD
         }
     }
     
-    func accountTextForTransaction(transaction: Transaction) -> String {
+    func accountTextForTransaction(_ transaction: Transaction) -> String {
         let type = TransactionTypes.fromString(transaction.type!)
         return "\(type.rawValue) in \(transaction.account!.name!)"
     }

@@ -20,15 +20,15 @@ class AccountEditViewController: CoreDataEditViewController, CoreDataEditViewCon
     
     //MARK: CoreDataEditViewControllerDelegate
     
-    func prepareObjectForEdition(object: BaseEntity) {
+    func prepareObjectForEdition(_ object: BaseEntity) {
         if let account = object as? Account {
             nameTextField.text = account.name
         }
     }
     
     func prepareNewObjectForEdition() {
-        let entityDescription = NSEntityDescription.entityForName("Account", inManagedObjectContext: managedObjectContext)!
-        object = NSManagedObject(entity: entityDescription, insertIntoManagedObjectContext: managedObjectContext) as! Account
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Account", in: managedObjectContext)!
+        object = NSManagedObject(entity: entityDescription, insertInto: managedObjectContext) as! Account
     }
     
     func prepareObjectForSaving() -> Bool {

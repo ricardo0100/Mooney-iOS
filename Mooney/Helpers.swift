@@ -10,13 +10,13 @@ import Foundation
 
 extension NSDecimalNumber {
     
-    func toCurrencyStringWithCurrencySymbol(symbol: String, andDecimalSeparator separator: String) -> String {
-        let formater = NSNumberFormatter()
+    func toCurrencyStringWithCurrencySymbol(_ symbol: String, andDecimalSeparator separator: String) -> String {
+        let formater = NumberFormatter()
         formater.maximumFractionDigits = 2
         formater.minimumFractionDigits = 2
         formater.minimumIntegerDigits = 1
         formater.decimalSeparator = separator
-        let stringValue = formater.stringFromNumber(self)!
+        let stringValue = formater.string(from: self)!
         return "\(symbol) \(stringValue)"
     }
     

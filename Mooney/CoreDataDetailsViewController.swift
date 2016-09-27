@@ -14,21 +14,21 @@ class CoreDataDetailsViewController: UIViewController {
     var object: BaseEntity?
     var delegate: CoreDataDetailViewControllerDelegate?
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadViewData()
     }
     
     func reloadViewData() {
         //TODO: use guard keyword
-        if let dataObject = object, viewDelegate = delegate {
+        if let dataObject = object, let viewDelegate = delegate {
             viewDelegate.reloadViewDataWithObject(dataObject)
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Edit" {
-            let destinationNavigationController = segue.destinationViewController as! UINavigationController
+            let destinationNavigationController = segue.destination as! UINavigationController
             let destination =  destinationNavigationController.topViewController as! CoreDataEditViewController
             destination.object = self.object
         }
@@ -38,6 +38,6 @@ class CoreDataDetailsViewController: UIViewController {
 
 protocol CoreDataDetailViewControllerDelegate {
     
-    func reloadViewDataWithObject(object: BaseEntity)
+    func reloadViewDataWithObject(_ object: BaseEntity)
     
 }

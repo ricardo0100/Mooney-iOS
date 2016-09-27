@@ -25,7 +25,7 @@ class AccountDetailsViewController: CoreDataDetailsViewController, CoreDataDetai
     
     //MARK: CoreDataDetailViewControllerDelegate
     
-    func reloadViewDataWithObject(object: BaseEntity) {
+    func reloadViewDataWithObject(_ object: BaseEntity) {
         if let account = object as? Account {
             accountNameLabel.text = account.name
             totalLabel.text = "\(account.sumOfAllTransactions().toCurrencyString())"
@@ -38,14 +38,14 @@ class AccountDetailsViewController: CoreDataDetailsViewController, CoreDataDetai
         extractTableView.reloadData()
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return transactions.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Extract Transaction", forIndexPath: indexPath) as! ExtractTransactionTableViewCell
-        cell.nameLabel.text = transactions[indexPath.row].name
-        let value = transactions[indexPath.row].value as NSDecimalNumber?
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Extract Transaction", for: indexPath) as! ExtractTransactionTableViewCell
+        cell.nameLabel.text = transactions[(indexPath as NSIndexPath).row].name
+        let value = transactions[(indexPath as NSIndexPath).row].value as NSDecimalNumber?
         cell.valueLabel.text = "\(value!.toCurrencyString())"
         return cell
     }

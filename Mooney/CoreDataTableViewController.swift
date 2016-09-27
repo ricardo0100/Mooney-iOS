@@ -18,12 +18,12 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
         return nil
     }
     
-    var fetchedResultsController: NSFetchedResultsController?
+    var fetchedResultsController: NSFetchedResultsController<BaseEntity>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if let entity = entityName {
-            let fetchRequest = NSFetchRequest(entityName: entity)
+            let fetchRequest = NSFetchRequest<BaseEntity>(entityName: entity)
             fetchRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
             fetchedResultsController = NSFetchedResultsController(
                 fetchRequest: fetchRequest,
@@ -35,25 +35,25 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
         tableView.allowsMultipleSelectionDuringEditing = true
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         performFetch()
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-        return !tableView.editing
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return !tableView.isEditing
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Select" {
-            let destination = segue.destinationViewController as! CoreDataDetailsViewController
-            destination.object = fetchedResultsController!.objectAtIndexPath(tableView.indexPathForSelectedRow!) as? BaseEntity
+            let destination = segue.destination as! CoreDataDetailsViewController
+            destination.object = fetchedResultsController!.object(at: tableView.indexPathForSelectedRow!)
         }
         if segue.identifier == "Edit" {
-            let destinationNavigationController = segue.destinationViewController as! UINavigationController
+            let destinationNavigationController = segue.destination as! UINavigationController
             let destination =  destinationNavigationController.topViewController as! CoreDataEditViewController
-            let indexPath = sender as! NSIndexPath
-            destination.object = fetchedResultsController!.objectAtIndexPath(indexPath) as? BaseEntity
+            let indexPath = sender as! IndexPath
+            destination.object = fetchedResultsController!.object(at: indexPath)
         }
     }
     
@@ -66,88 +66,88 @@ class CoreDataTableViewController: UITableViewController, NSFetchedResultsContro
     
     //MARK: NSFetchedResultsControllerDelegate
     
-    func controllerWillChangeContent(controller: NSFetchedResultsController) {
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.beginUpdates()
     }
     
-    func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
-        case .Delete:
-            tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
+        case .delete:
+            tableView.deleteRows(at: [indexPath!], with: .automatic)
             break
-        case .Insert:
-            tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Automatic)
+        case .insert:
+            tableView.insertRows(at: [newIndexPath!], with: .automatic)
             break
-        case .Move:
+        case .move:
             if indexPath == newIndexPath {
-                tableView.reloadRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
+                tableView.reloadRows(at: [indexPath!], with: .automatic)
             } else {
-                tableView.moveRowAtIndexPath(indexPath!, toIndexPath: newIndexPath!)
+                tableView.moveRow(at: indexPath!, to: newIndexPath!)
             }
             break
-        case .Update:
-            tableView.reloadRowsAtIndexPaths([indexPath!], withRowAnimation: .Automatic)
+        case .update:
+            tableView.reloadRows(at: [indexPath!], with: .automatic)
             break
         }
     }
     
-    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
         tableView.endUpdates()
     }
     
     //MARK: UITableViewDataSource
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         if let results = fetchedResultsController, let sections = results.sections {
             return sections.count
         }
         return 0
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let results = fetchedResultsController, let sections = results.sections {
             return sections[section].numberOfObjects
         }
         return 0
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         if let results = fetchedResultsController {
-            let object = results.objectAtIndexPath(indexPath) as! BaseEntity
+            let object = results.object(at: indexPath)
             cell.textLabel?.text = object.name
         }
         return cell
     }
     
-    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
-        let deleteRowAction = UITableViewRowAction(style: .Default, title: "Delete") { (rowAction, indexPath) in
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteRowAction = UITableViewRowAction(style: .default, title: "Delete") { (rowAction, indexPath) in
             if let results = self.fetchedResultsController {
-                let object = results.objectAtIndexPath(indexPath) as! BaseEntity
+                let object = results.object(at: indexPath)
                 self.showDeleteConfirmationDialogForObject(object)
             }
         }
-        let editRowAction = UITableViewRowAction(style: .Normal, title: "Edit") { (rowAction, indexPath) in
-            self.performSegueWithIdentifier("Edit", sender: indexPath)
+        let editRowAction = UITableViewRowAction(style: .normal, title: "Edit") { (rowAction, indexPath) in
+            self.performSegue(withIdentifier: "Edit", sender: indexPath)
         }
         return [deleteRowAction, editRowAction]
     }
     
-    func showDeleteConfirmationDialogForObject(object: BaseEntity) {
-        let alertController = UIAlertController(title: "Warning", message: "Delete \(object.name!)?", preferredStyle: .ActionSheet)
+    func showDeleteConfirmationDialogForObject(_ object: BaseEntity) {
+        let alertController = UIAlertController(title: "Warning", message: "Delete \(object.name!)?", preferredStyle: .actionSheet)
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             self.tableView.setEditing(false, animated: true)
         }
         alertController.addAction(cancelAction)
         
-        let OKAction = UIAlertAction(title: "Delete", style: .Destructive) { (action) in
-            self.managedObjectContext.deleteObject(object)
+        let OKAction = UIAlertAction(title: "Delete", style: .destructive) { (action) in
+            self.managedObjectContext.delete(object)
             try! self.managedObjectContext.save()
         }
         alertController.addAction(OKAction)
         
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     
 }

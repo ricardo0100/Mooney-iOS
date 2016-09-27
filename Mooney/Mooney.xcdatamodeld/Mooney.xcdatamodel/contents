@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Automatic">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Account" representedClassName=".Account" parentEntity="BaseEntity" syncable="YES">
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="account" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="BaseEntity" representedClassName=".BaseEntity" isAbstract="YES" syncable="YES">
-        <attribute name="creation" optional="YES" attributeType="Date" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="removed" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
-        <attribute name="update" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="creation" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="removed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="update" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uuid" attributeType="String" syncable="YES"/>
+        <userInfo>
+            <entry key="hyper.isPrimaryKey" value="true"/>
+        </userInfo>
     </entity>
     <entity name="Category" representedClassName=".Category" parentEntity="BaseEntity" syncable="YES">
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
@@ -20,7 +24,7 @@
     </entity>
     <elements>
         <element name="Account" positionX="-135" positionY="-18" width="128" height="60"/>
-        <element name="BaseEntity" positionX="-36" positionY="81" width="128" height="103"/>
+        <element name="BaseEntity" positionX="-36" positionY="81" width="128" height="120"/>
         <element name="Category" positionX="-135" positionY="141" width="128" height="58"/>
         <element name="Transaction" positionX="61" positionY="24" width="128" height="105"/>
     </elements>

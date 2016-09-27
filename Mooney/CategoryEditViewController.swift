@@ -20,15 +20,15 @@ class CategoryEditViewController: CoreDataEditViewController, CoreDataEditViewCo
     
     //MARK: CoreDataEditViewControllerDelegate
     
-    func prepareObjectForEdition(object: BaseEntity) {
+    func prepareObjectForEdition(_ object: BaseEntity) {
         if let category = object as? Category {
             nameTextField.text = category.name
         }
     }
     
     func prepareNewObjectForEdition() {
-        let entityDescription = NSEntityDescription.entityForName("Category", inManagedObjectContext: managedObjectContext)!
-        object = NSManagedObject(entity: entityDescription, insertIntoManagedObjectContext: managedObjectContext) as! Category
+        let entityDescription = NSEntityDescription.entity(forEntityName: "Category", in: managedObjectContext)!
+        object = NSManagedObject(entity: entityDescription, insertInto: managedObjectContext) as! Category
     }
     
     func prepareObjectForSaving() -> Bool {

@@ -15,12 +15,12 @@ class CoreDataEditViewController: UIViewController {
     var delegate: CoreDataEditViewControllerDelegate?
     let managedObjectContext = AppDelegate.sharedAppDelegate().managedObjectContext
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareObject()
     }
 
-    @IBAction func saveButtonClicked(sender: UIButton) {
+    @IBAction func saveButtonClicked(_ sender: UIButton) {
         guard let viewDelegate = delegate else {
             return
         }
@@ -32,11 +32,11 @@ class CoreDataEditViewController: UIViewController {
         if(viewDelegate.prepareObjectForSaving()) {
             try! managedObjectContext.save()
         }
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func cancelButtonChecked(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButtonChecked(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
     }
     
     func prepareObject() {
@@ -52,7 +52,7 @@ class CoreDataEditViewController: UIViewController {
 
 protocol CoreDataEditViewControllerDelegate {
     
-    func prepareObjectForEdition(object: BaseEntity)
+    func prepareObjectForEdition(_ object: BaseEntity)
     func prepareNewObjectForEdition()
     func prepareObjectForSaving() -> Bool
     

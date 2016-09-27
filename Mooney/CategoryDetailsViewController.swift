@@ -19,7 +19,7 @@ class CategoryDetailsViewController: CoreDataDetailsViewController, CoreDataDeta
     
     //MARK: CoreDataDetailViewControllerDelegate
     
-    func reloadViewDataWithObject(object: BaseEntity) {
+    func reloadViewDataWithObject(_ object: BaseEntity) {
         if let category = object as? Category {
             categoryNameLabel.text = category.name
         }

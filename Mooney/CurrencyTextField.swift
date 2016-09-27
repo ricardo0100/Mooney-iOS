@@ -28,26 +28,26 @@ class CurrencyTextField: UITextField, UITextFieldDelegate {
     }
     
     func getValue() -> NSDecimalNumber {
-        var valueString = text?.stringByReplacingOccurrencesOfString(Configuration.currencySymbol, withString: "")
-        valueString = valueString!.stringByReplacingOccurrencesOfString(Configuration.decimalSeparator, withString: ".")
+        var valueString = text?.replacingOccurrences(of: Configuration.currencySymbol, with: "")
+        valueString = valueString!.replacingOccurrences(of: Configuration.decimalSeparator, with: ".")
         let value = NSDecimalNumber(string: valueString)
         return value
     }
     
-    func setValue(value: NSDecimalNumber) {
+    func setValue(_ value: NSDecimalNumber) {
         text = value.toCurrencyString()
     }
     
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         //Process character concatenation
-        var newText = (textField.text! as NSString).stringByReplacingCharactersInRange(range, withString: string)
-        newText = newText.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet).joinWithSeparator("")
-        newText = newText.stringByReplacingOccurrencesOfString(Configuration.decimalSeparator, withString: "")
-        newText = newText.stringByReplacingOccurrencesOfString(Configuration.currencySymbol, withString: "")
-        newText = newText.stringByReplacingOccurrencesOfString(" ", withString: "")
+        var newText = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        newText = newText.components(separatedBy: CharacterSet.decimalDigits.inverted).joined(separator: "")
+        newText = newText.replacingOccurrences(of: Configuration.decimalSeparator, with: "")
+        newText = newText.replacingOccurrences(of: Configuration.currencySymbol, with: "")
+        newText = newText.replacingOccurrences(of: " ", with: "")
         let integerNumber = Double(newText)!
         let multiplier = 1 / pow(Double(10), Double(decimalPlaces))
-        setValue(NSDecimalNumber(double: integerNumber * multiplier))
+        setValue(NSDecimalNumber(value: integerNumber * multiplier as Double))
         return false
     }
     

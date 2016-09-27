@@ -12,7 +12,7 @@ enum TransactionTypes: String {
     case Debit = "Debit"
     case Credit = "Credit"
     
-    static func fromString(string: String) -> TransactionTypes {
+    static func fromString(_ string: String) -> TransactionTypes {
         switch string {
         case Credit.rawValue:
             return Credit

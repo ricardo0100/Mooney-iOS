@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="053-BM-6nJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="053-BM-6nJ">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Categories-->
@@ -11,22 +12,22 @@
             <objects>
                 <tableViewController id="9Tq-SA-uor" customClass="CategoriesTableViewController" customModule="Mooney" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lOi-ra-bG8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="BBs-Gq-R9i" style="IBUITableViewCellStyleDefault" id="5f6-Wo-2iz">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5f6-Wo-2iz" id="qsY-Cq-7ZZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <frame key="frameInset" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BBs-Gq-R9i">
-                                            <rect key="frame" x="15" y="0.0" width="290" height="43"/>
+                                            <frame key="frameInset" minX="15" width="290" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -50,7 +51,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RF-kX-2DI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,7 +63,6 @@
                     <tabBarItem key="tabBarItem" title="Categories" image="ic_view_week" id="upp-u7-HQJ"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="E7q-2n-tAb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -75,7 +74,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KR9-Bc-RVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="280" y="657"/>
+            <point key="canvasLocation" x="-111" y="656"/>
         </scene>
         <!--Category Details View Controller-->
         <scene sceneID="ea8-C8-1fa">
@@ -86,26 +85,23 @@
                         <viewControllerLayoutGuide type="bottom" id="dlg-45-uIO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="H4b-bE-GCt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LQa-pJ-Gcy">
-                                <rect key="frame" x="16" y="72" width="288" height="22"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LQa-pJ-Gcy" secondAttribute="trailing" id="JSC-tP-eur"/>
                             <constraint firstItem="LQa-pJ-Gcy" firstAttribute="leading" secondItem="H4b-bE-GCt" secondAttribute="leadingMargin" id="KRX-mb-xFi"/>
                             <constraint firstItem="LQa-pJ-Gcy" firstAttribute="top" secondItem="RXf-7R-6Tv" secondAttribute="bottom" constant="8" id="idx-E9-Ten"/>
                         </constraints>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="eWQ-e4-HPB"/>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="ldK-V3-TCt">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="KZe-6A-ZfT">
                             <connections>
@@ -113,22 +109,20 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="categoryNameLabel" destination="LQa-pJ-Gcy" id="KKN-gk-H0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wF-ti-90L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1134" y="985"/>
+            <point key="canvasLocation" x="698" y="1480"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XXa-hb-iEx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LPy-gn-CUO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rl3-c8-wZb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -140,7 +134,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r25-zw-tsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568" y="300"/>
+            <point key="canvasLocation" x="1646" y="1073"/>
         </scene>
         <!--Category Edit View Controller-->
         <scene sceneID="YFE-X8-OVv">
@@ -151,22 +145,20 @@
                         <viewControllerLayoutGuide type="bottom" id="xf5-pN-YRk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cAf-t1-zjh">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hij-5f-hUH">
-                                <rect key="frame" x="8" y="8" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lvd-Dg-es7">
-                                <rect key="frame" x="8" y="37" width="304" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Lvd-Dg-es7" secondAttribute="trailing" constant="8" id="8Xp-1U-Whr"/>
                             <constraint firstItem="Lvd-Dg-es7" firstAttribute="top" secondItem="hij-5f-hUH" secondAttribute="bottom" constant="8" id="EoY-VQ-BCf"/>
@@ -188,20 +180,19 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="nameTextField" destination="Lvd-Dg-es7" id="6BY-bS-CRB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yt-Ua-s8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1985" y="300"/>
+            <point key="canvasLocation" x="2443" y="1073"/>
         </scene>
     </scenes>
     <resources>
         <image name="ic_view_week" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yft-0I-a6q"/>
+        <segue reference="hkw-1f-gKm"/>
     </inferredMetricsTieBreakers>
 </document>

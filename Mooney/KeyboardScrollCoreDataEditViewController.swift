@@ -19,35 +19,35 @@ class KeyboardScrollCoreDataEditViewController: CoreDataEditViewController {
         view.addGestureRecognizer(tapGesture)
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name: "UIKeyboardWillShowNotification", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide(_:)), name: "UIKeyboardWillHideNotification", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name(rawValue: "UIKeyboardWillShowNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name(rawValue: "UIKeyboardWillHideNotification"), object: nil)
         
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "UIKeyboardWillShowNotification", object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "UIKeyboardWillHideNotification", object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillShowNotification"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: "UIKeyboardWillHideNotification"), object: nil)
     }
     
-    func keyboardWillShow(notification: NSNotification) {
-        let keyboardSize = notification.userInfo!["UIKeyboardFrameEndUserInfoKey"]
-        let duration = notification.userInfo!["UIKeyboardAnimationDurationUserInfoKey"]
-        let inset = UIEdgeInsets(top: 0, left: 0, bottom: (keyboardSize?.CGRectValue().height)!, right: 0)
-        UIView.animateWithDuration(duration!.doubleValue!) {
+    func keyboardWillShow(_ notification: Notification) {
+        let keyboardSize = (notification as NSNotification).userInfo!["UIKeyboardFrameEndUserInfoKey"]
+        let duration = (notification as NSNotification).userInfo!["UIKeyboardAnimationDurationUserInfoKey"]
+        let inset = UIEdgeInsets(top: 0, left: 0, bottom: ((keyboardSize as AnyObject).cgRectValue.height), right: 0)
+        UIView.animate(withDuration: (duration! as AnyObject).doubleValue!, animations: {
             self.scrollView.contentInset = inset
-        }
+        }) 
     }
     
-    func keyboardWillHide(notification: NSNotification) {
-        let duration = notification.userInfo!["UIKeyboardAnimationDurationUserInfoKey"]
-        UIView.animateWithDuration(duration!.doubleValue!) {
-            self.scrollView.contentInset = UIEdgeInsetsZero
-        }
+    func keyboardWillHide(_ notification: Notification) {
+        let duration = (notification as NSNotification).userInfo!["UIKeyboardAnimationDurationUserInfoKey"]
+        UIView.animate(withDuration: (duration! as AnyObject).doubleValue!, animations: {
+            self.scrollView.contentInset = UIEdgeInsets.zero
+        }) 
     }
     
     func endEditing() {

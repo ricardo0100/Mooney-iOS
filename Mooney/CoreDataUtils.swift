@@ -11,10 +11,10 @@ import CoreData
 
 class CoreDataUtils {
 
-    static func retrieveAllObjectsWithEntityName(entityName: String) -> [AnyObject] {
+    static func retrieveAllObjectsWithEntityName(_ entityName: String) -> [AnyObject] {
         let managedObjectContext = AppDelegate.sharedAppDelegate().managedObjectContext
-        let fetchrequest = NSFetchRequest(entityName: entityName)
-        let result = try! managedObjectContext.executeFetchRequest(fetchrequest)
+        let fetchrequest = NSFetchRequest<BaseEntity>(entityName: entityName)
+        let result = try! managedObjectContext.fetch(fetchrequest)
         return result
     }
     
