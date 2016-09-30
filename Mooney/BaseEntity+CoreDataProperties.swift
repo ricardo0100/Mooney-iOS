@@ -15,8 +15,8 @@ import CoreData
 extension BaseEntity {
 
     @NSManaged var name: String?
-    @NSManaged var creation: Date?
-    @NSManaged var update: Date?
+    @NSManaged var createdAt: Date?
+    @NSManaged var updatedAt: Date?
     @NSManaged var removed: NSNumber?
     @NSManaged var uuid: String?
 

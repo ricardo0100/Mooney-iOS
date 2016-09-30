@@ -35,17 +35,17 @@ class KeyboardScrollCoreDataEditViewController: CoreDataEditViewController {
     }
     
     func keyboardWillShow(_ notification: Notification) {
-        let keyboardSize = (notification as NSNotification).userInfo!["UIKeyboardFrameEndUserInfoKey"]
-        let duration = (notification as NSNotification).userInfo!["UIKeyboardAnimationDurationUserInfoKey"]
-        let inset = UIEdgeInsets(top: 0, left: 0, bottom: ((keyboardSize as AnyObject).cgRectValue.height), right: 0)
-        UIView.animate(withDuration: (duration! as AnyObject).doubleValue!, animations: {
+        let keyboardSize = notification.userInfo!["UIKeyboardFrameEndUserInfoKey"] as! NSValue
+        let duration = notification.userInfo!["UIKeyboardAnimationDurationUserInfoKey"] as! NSNumber
+        let inset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.cgRectValue.height, right: 0)
+        UIView.animate(withDuration: duration.doubleValue, animations: {
             self.scrollView.contentInset = inset
-        }) 
+        })
     }
     
     func keyboardWillHide(_ notification: Notification) {
-        let duration = (notification as NSNotification).userInfo!["UIKeyboardAnimationDurationUserInfoKey"]
-        UIView.animate(withDuration: (duration! as AnyObject).doubleValue!, animations: {
+        let duration = notification.userInfo!["UIKeyboardAnimationDurationUserInfoKey"] as! NSNumber
+        UIView.animate(withDuration: duration.doubleValue, animations: {
             self.scrollView.contentInset = UIEdgeInsets.zero
         }) 
     }

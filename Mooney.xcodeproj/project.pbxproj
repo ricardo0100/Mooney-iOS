@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38BBB4FD3B9FD523D5A4FD27 /* Pods_Mooney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD40D0FA2E3DB0CF3686803 /* Pods_Mooney.framework */; };
 		BA200FCE1D73EB7E00607A94 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FC61D73EB7E00607A94 /* Category+CoreDataProperties.swift */; };
 		BA200FCF1D73EB7E00607A94 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FC71D73EB7E00607A94 /* Category.swift */; };
 		BA200FD01D73EB7E00607A94 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FC81D73EB7E00607A94 /* Account+CoreDataProperties.swift */; };
@@ -15,6 +16,7 @@
 		BA200FD31D73EB7E00607A94 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCB1D73EB7E00607A94 /* Transaction.swift */; };
 		BA200FD41D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCC1D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift */; };
 		BA200FD51D73EB7E00607A94 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FCD1D73EB7E00607A94 /* BaseEntity.swift */; };
+		BA2CE7E31D9A0BB200254B41 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2CE7E21D9A0BB200254B41 /* API.swift */; };
 		BA4909351D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4909341D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift */; };
 		BA4B06261D7B10990000FEF5 /* CoreDataEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */; };
 		BA4B06281D7B26B90000FEF5 /* CoreDataDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */; };
@@ -44,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		39B9912238B6806F5E1C7317 /* Pods-Mooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.release.xcconfig"; sourceTree = "<group>"; };
 		BA200FC61D73EB7E00607A94 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA200FC71D73EB7E00607A94 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BA200FC81D73EB7E00607A94 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		BA200FCB1D73EB7E00607A94 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BA200FCC1D73EB7E00607A94 /* BaseEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BaseEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA200FCD1D73EB7E00607A94 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		BA2CE7E21D9A0BB200254B41 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		BA4909341D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtractTransactionTableViewCell.swift; sourceTree = "<group>"; };
 		BA4B06251D7B10990000FEF5 /* CoreDataEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataEditViewController.swift; sourceTree = "<group>"; };
 		BA4B06271D7B26B90000FEF5 /* CoreDataDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataDetailsViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +80,12 @@
 		BAC4D39A1D6533CF0042C774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BAC4D39C1D6533CF0042C774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAC4D3AF1D655DB30042C774 /* CoreDataUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUtils.swift; sourceTree = "<group>"; };
+		BAD40D0FA2E3DB0CF3686803 /* Pods_Mooney.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mooney.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADA7B201D6BEBB700F28FD0 /* TransactionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDetailsViewController.swift; sourceTree = "<group>"; };
 		BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsTableViewController.swift; sourceTree = "<group>"; };
 		BAE5E8A21D6DE08B0084BDE3 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		BAFE3B8A1D7EF65400764013 /* CurrencyTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		CB744DE36DCE7E5D1CCB9109 /* Pods-Mooney.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +93,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BBB4FD3B9FD523D5A4FD27 /* Pods_Mooney.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9ABEBADD0F0B45FFE76CB104 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAD40D0FA2E3DB0CF3686803 /* Pods_Mooney.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A4EBB1AFB212BF8130565FFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CB744DE36DCE7E5D1CCB9109 /* Pods-Mooney.debug.xcconfig */,
+				39B9912238B6806F5E1C7317 /* Pods-Mooney.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA2CE7E11D9A0B3B00254B41 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BA2CE7E21D9A0BB200254B41 /* API.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
 		BAA1412B1D732A17002A2C10 /* Common View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +141,8 @@
 			children = (
 				BAC4D38C1D6533CF0042C774 /* Mooney */,
 				BAC4D38B1D6533CF0042C774 /* Products */,
+				A4EBB1AFB212BF8130565FFF /* Pods */,
+				9ABEBADD0F0B45FFE76CB104 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +157,7 @@
 		BAC4D38C1D6533CF0042C774 /* Mooney */ = {
 			isa = PBXGroup;
 			children = (
+				BA2CE7E11D9A0B3B00254B41 /* API */,
 				BAFE3B881D7EF61500764013 /* App */,
 				BAE5E89F1D6DDF9C0084BDE3 /* Transactions */,
 				BAE5E8A01D6DDFA20084BDE3 /* Accounts */,
@@ -188,6 +223,9 @@
 		BAFE3B881D7EF61500764013 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				BAC4D3911D6533CF0042C774 /* Main.storyboard */,
+				BAC4D3991D6533CF0042C774 /* LaunchScreen.storyboard */,
+				BAC4D3971D6533CF0042C774 /* Assets.xcassets */,
 				BAC4D39C1D6533CF0042C774 /* Info.plist */,
 				BAC4D38D1D6533CF0042C774 /* AppDelegate.swift */,
 				BAC415281D91D88B00FF8B82 /* Helpers.swift */,
@@ -199,9 +237,6 @@
 		BAFE3B891D7EF61E00764013 /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
-				BAC4D3911D6533CF0042C774 /* Main.storyboard */,
-				BAC4D3971D6533CF0042C774 /* Assets.xcassets */,
-				BAC4D3991D6533CF0042C774 /* LaunchScreen.storyboard */,
 				BAFE3B8A1D7EF65400764013 /* CurrencyTextField.swift */,
 			);
 			name = "Common Views";
@@ -214,9 +249,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAC4D39F1D6533CF0042C774 /* Build configuration list for PBXNativeTarget "Mooney" */;
 			buildPhases = (
+				3A230A16C3E759935FA7196D /* [CP] Check Pods Manifest.lock */,
 				BAC4D3861D6533CF0042C774 /* Sources */,
 				BAC4D3871D6533CF0042C774 /* Frameworks */,
 				BAC4D3881D6533CF0042C774 /* Resources */,
+				551A1ED4D38121B3237DD6E8 /* [CP] Embed Pods Frameworks */,
+				9FD0F2A3E8ADFD191C7804ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +315,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3A230A16C3E759935FA7196D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		551A1ED4D38121B3237DD6E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mooney/Pods-Mooney-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FD0F2A3E8ADFD191C7804ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mooney/Pods-Mooney-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAC4D3861D6533CF0042C774 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -296,6 +382,7 @@
 				BA200FD11D73EB7E00607A94 /* Account.swift in Sources */,
 				BAE5E89E1D6DDF200084BDE3 /* AccountsTableViewController.swift in Sources */,
 				BA4B06261D7B10990000FEF5 /* CoreDataEditViewController.swift in Sources */,
+				BA2CE7E31D9A0BB200254B41 /* API.swift in Sources */,
 				BAC4D3901D6533CF0042C774 /* TransactionsTableViewController.swift in Sources */,
 				BAC4D38E1D6533CF0042C774 /* AppDelegate.swift in Sources */,
 				BA4909351D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift in Sources */,
@@ -374,7 +461,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -415,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -425,7 +512,9 @@
 		};
 		BAC4D3A01D6533CF0042C774 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB744DE36DCE7E5D1CCB9109 /* Pods-Mooney.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mooney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -437,7 +526,9 @@
 		};
 		BAC4D3A11D6533CF0042C774 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B9912238B6806F5E1C7317 /* Pods-Mooney.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Mooney/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

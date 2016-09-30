@@ -14,8 +14,8 @@ class BaseEntity: NSManagedObject {
     
     override func awakeFromInsert() {
         super.awakeFromInsert()
-        creation = Date()
-        update = Date()
+        createdAt = Date()
+        updatedAt = Date()
         uuid = NSUUID().uuidString
     }
     
