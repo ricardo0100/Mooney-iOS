@@ -5,14 +5,15 @@
     </entity>
     <entity name="BaseEntity" representedClassName=".BaseEntity" isAbstract="YES" syncable="YES">
         <attribute name="createdAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="hyper.isPrimaryKey" value="true"/>
+                <entry key="hyper.remoteKey" value="_id"/>
+            </userInfo>
+        </attribute>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="removed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="uuid" attributeType="String" syncable="YES">
-            <userInfo>
-                <entry key="hyper.isPrimaryKey" value="true"/>
-            </userInfo>
-        </attribute>
     </entity>
     <entity name="Category" representedClassName=".Category" parentEntity="BaseEntity" syncable="YES">
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>

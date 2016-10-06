@@ -18,6 +18,6 @@ extension BaseEntity {
     @NSManaged var createdAt: Date?
     @NSManaged var updatedAt: Date?
     @NSManaged var removed: NSNumber?
-    @NSManaged var uuid: String?
+    @NSManaged var id: String?
 
 }

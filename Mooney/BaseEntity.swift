@@ -16,7 +16,7 @@ class BaseEntity: NSManagedObject {
         super.awakeFromInsert()
         createdAt = Date()
         updatedAt = Date()
-        uuid = NSUUID().uuidString
+        id = NSUUID().uuidString
     }
     
 }

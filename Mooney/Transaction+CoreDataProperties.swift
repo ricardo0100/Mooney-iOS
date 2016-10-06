@@ -1,4 +1,4 @@
-//
+    //
 //  Transaction+CoreDataProperties.swift
 //  Mooney
 //

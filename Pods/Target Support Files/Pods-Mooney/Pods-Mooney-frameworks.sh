@@ -85,27 +85,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAFilter/DATAFilter.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAObjectIDs/DATAObjectIDs.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DATAStack/DATAStack.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DateParser/DateParser.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSDictionary-ANDYSafeValue/NSDictionary_ANDYSafeValue.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSEntityDescription-SYNCPrimaryKey/NSEntityDescription_SYNCPrimaryKey.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSManagedObject-HYPPropertyMapper/NSManagedObject_HYPPropertyMapper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSString-HYPNetworking/NSString_HYPNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sync/Sync.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TestCheck/TestCheck.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAFilter/DATAFilter.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DATAObjectIDs/DATAObjectIDs.framework"
   install_framework "$BUILT_PRODUCTS_DIR/DATAStack/DATAStack.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/DateParser/DateParser.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSDictionary-ANDYSafeValue/NSDictionary_ANDYSafeValue.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSEntityDescription-SYNCPrimaryKey/NSEntityDescription_SYNCPrimaryKey.framework"
   install_framework "$BUILT_PRODUCTS_DIR/NSManagedObject-HYPPropertyMapper/NSManagedObject_HYPPropertyMapper.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/NSString-HYPNetworking/NSString_HYPNetworking.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Sync/Sync.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/TestCheck/TestCheck.framework"
 fi
