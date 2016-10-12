@@ -11,17 +11,31 @@ import Alamofire
 import Sync
 
 class API {
+    
+    let apiURL = "http://localhost:3000/api"
 
+    let headers: HTTPHeaders = [
+        "Authorization": "Basic cmljYXJkbzpyaTE1MTQxMw=="
+    ]
+    
     init() {
         sync()
     }
     
     func sync() {
-        let headers: HTTPHeaders = [
-            "Authorization": "Basic cmljYXJkbzpyaTE1MTQxMw=="
-        ]
-        
-        Alamofire.request("http://localhost:3000/api/accounts", headers: headers).responseJSON { response in
+        self.syncAccounts {
+            print("Sync Accounts completed")
+            self.syncCategories {
+                print("Sync Categories completed")
+                self.syncTransactions {
+                    print("Sync Transactions completed")
+                }
+            }
+        }
+    }
+    
+    func syncAccounts(completion: @escaping () -> Void) {
+        Alamofire.request("\(self.apiURL)/accounts", headers: self.headers).responseJSON { response in
             let dataStack = (UIApplication.shared.delegate as! AppDelegate).dataStack
             if let JSON = response.result.value {
                 Sync.changes(
@@ -29,14 +43,14 @@ class API {
                     inEntityNamed: "Account",
                     dataStack: dataStack,
                     operations: [.Insert, .Update]) { error in
-                        // New objects have been inserted
-                        // Existing objects have been updated
-                        // And not found objects have been deleted
+                        completion()
                 }
             }
         }
-        
-        Alamofire.request("http://localhost:3000/api/categories", headers: headers).responseJSON { response in
+    }
+    
+    func syncCategories(completion: @escaping () -> Void) {
+        Alamofire.request("\(self.apiURL)/categories", headers: self.headers).responseJSON { response in
             let dataStack = (UIApplication.shared.delegate as! AppDelegate).dataStack
             if let JSON = response.result.value {
                 Sync.changes(
@@ -44,9 +58,22 @@ class API {
                     inEntityNamed: "Category",
                     dataStack: dataStack,
                     operations: [.Insert, .Update]) { error in
-                        // New objects have been inserted
-                        // Existing objects have been updated
-                        // And not found objects have been deleted
+                        completion()
+                }
+            }
+        }
+    }
+    
+    func syncTransactions(completion: @escaping () -> Void) {
+        Alamofire.request("\(self.apiURL)/transactions", headers: self.headers).responseJSON { response in
+            let dataStack = (UIApplication.shared.delegate as! AppDelegate).dataStack
+            if let JSON = response.result.value {
+                Sync.changes(
+                    JSON as! [[String : Any]],
+                    inEntityNamed: "Transaction",
+                    dataStack: dataStack,
+                    operations: [.Insert, .Update]) { error in
+                        completion()
                 }
             }
         }

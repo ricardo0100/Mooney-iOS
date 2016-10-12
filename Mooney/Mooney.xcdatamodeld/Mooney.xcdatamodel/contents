@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G1004" minimumToolsVersion="Xcode 7.3" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Account" representedClassName=".Account" parentEntity="BaseEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="account" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="BaseEntity" representedClassName=".BaseEntity" isAbstract="YES" syncable="YES">
@@ -11,23 +12,24 @@
                 <entry key="hyper.remoteKey" value="_id"/>
             </userInfo>
         </attribute>
-        <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="removed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="Category" representedClassName=".Category" parentEntity="BaseEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="transactions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="category" inverseEntity="Transaction" syncable="YES"/>
     </entity>
     <entity name="Transaction" representedClassName=".Transaction" parentEntity="BaseEntity" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <relationship name="account" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Account" inverseName="transactions" inverseEntity="Account" syncable="YES"/>
         <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transactions" inverseEntity="Category" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-135" positionY="-18" width="128" height="60"/>
-        <element name="BaseEntity" positionX="-36" positionY="81" width="128" height="120"/>
-        <element name="Category" positionX="-135" positionY="141" width="128" height="58"/>
-        <element name="Transaction" positionX="61" positionY="24" width="128" height="105"/>
+        <element name="Account" positionX="-243" positionY="54" width="128" height="73"/>
+        <element name="BaseEntity" positionX="-396" positionY="114" width="128" height="103"/>
+        <element name="Category" positionX="-252" positionY="270" width="128" height="73"/>
+        <element name="Transaction" positionX="-56" positionY="144" width="128" height="118"/>
     </elements>
 </model>

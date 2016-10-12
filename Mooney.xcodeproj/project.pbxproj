@@ -203,7 +203,6 @@
 				BAE5E89D1D6DDF200084BDE3 /* AccountsTableViewController.swift */,
 				BA4CA6D21D7463FE002F80D6 /* AccountDetailsViewController.swift */,
 				BA52354F1D7CD603005B9BB5 /* AccountEditViewController.swift */,
-				BA4909341D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift */,
 				BA888D431D7B0AAD00B22CF4 /* Accounts.storyboard */,
 			);
 			name = Accounts;
@@ -237,6 +236,7 @@
 		BAFE3B891D7EF61E00764013 /* Common Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA4909341D8F61E800D9DBB6 /* ExtractTransactionTableViewCell.swift */,
 				BAFE3B8A1D7EF65400764013 /* CurrencyTextField.swift */,
 			);
 			name = "Common Views";
