@@ -28,7 +28,10 @@ iOS App for personal finances management
   - [ ] POST new objects
   - [ ] Authentication
   - [ ] API background context
-  
+
+## Model
+  - [ ] Validate data before saving
+
 ## UI
   - [x] Accounts CRUD
   - [x] Categories CRUD
@@ -36,6 +39,7 @@ iOS App for personal finances management
   - [ ] Authentication
   - [ ] UI Update from API changes
   - [ ] Launchscreen
+  - [ ] Validation error feedback
   
 # App Extension
   - App extension in notification center to quickly add new transaction
