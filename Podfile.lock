@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (4.0.1)
-  - DATAStack (6.0.1)
-  - NSManagedObject-HYPPropertyMapper (4.1.4)
-  - Sync (2.2.0):
-    - DATAStack (~> 6.0.1)
-    - NSManagedObject-HYPPropertyMapper (~> 4.1.4)
+  - DATAStack (6.1.0)
+  - Sync (2.3.1):
+    - DATAStack (~> 6.1.0)
+    - SYNCPropertyMapper (~> 5.0.1)
+  - SYNCPropertyMapper (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -12,9 +12,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  DATAStack: 4138a30db76d535d04f9130847ac59748c6c16aa
-  NSManagedObject-HYPPropertyMapper: 0502d7a0dcb8c0c8112757b80e6318a1baf9c486
-  Sync: 3be1ae6ae93685770d56b437a224e859989a14d6
+  DATAStack: 753e2b009ddb8918c6329919f09c1f9d2bcd7cc2
+  Sync: 6926aaf4fda1ae751591a54cff3c2d778bd821bc
+  SYNCPropertyMapper: 316eeeeaad170a7407a82b15989852fcbf1f6573
 
 PODFILE CHECKSUM: 9aa63bc7efaac920bc70cd257c4da3e0de2b623c
 
