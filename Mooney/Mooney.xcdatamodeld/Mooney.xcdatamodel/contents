@@ -13,6 +13,11 @@
             </userInfo>
         </attribute>
         <attribute name="removed" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="synchronized" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="NO" syncable="YES">
+            <userInfo>
+                <entry key="hyper.nonExportable" value="value"/>
+            </userInfo>
+        </attribute>
         <attribute name="updatedAt" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
     </entity>
     <entity name="Category" representedClassName=".Category" parentEntity="BaseEntity" syncable="YES">
@@ -28,8 +33,8 @@
     </entity>
     <elements>
         <element name="Account" positionX="-243" positionY="54" width="128" height="73"/>
-        <element name="BaseEntity" positionX="-396" positionY="114" width="128" height="103"/>
+        <element name="BaseEntity" positionX="-396" positionY="114" width="128" height="120"/>
         <element name="Category" positionX="-252" positionY="270" width="128" height="73"/>
-        <element name="Transaction" positionX="-56" positionY="144" width="128" height="118"/>
+        <element name="Transaction" positionX="-47" positionY="108" width="128" height="118"/>
     </elements>
 </model>

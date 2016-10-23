@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let dataStack = DATAStack(modelName:"Mooney")
-    let api = API()
 
     static func sharedAppDelegate() -> AppDelegate {
         return UIApplication.shared.delegate as! AppDelegate
@@ -23,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         handleContextWillSaveNotification()
+        API.sharedInstance.sync()
         return true
     }
 
@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return self.dataStack.mainContext
     }()
 
+    //TODO: move to a separate class
     func handleContextWillSaveNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.willSaveNotificationCalled(_:)), name: NSNotification.Name(rawValue: "NSManagedObjectContextWillSaveNotification"), object: nil)
     }

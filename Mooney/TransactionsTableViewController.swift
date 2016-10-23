@@ -10,6 +10,10 @@ import UIKit
 
 class TransactionsTableViewController: CoreDataTableViewController {
     
+    @IBAction func sync(_ sender: AnyObject) {
+        API.sharedInstance.sync()
+    }
+    
     override var entityName: String? {
         return "Transaction"
     }
