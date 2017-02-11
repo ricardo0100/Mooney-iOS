@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		38BBB4FD3B9FD523D5A4FD27 /* Pods_Mooney.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD40D0FA2E3DB0CF3686803 /* Pods_Mooney.framework */; };
+		BA101E821E25045500412EA7 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA101E811E25045500412EA7 /* NotificationCenter.framework */; };
+		BA101E851E25045500412EA7 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA101E841E25045500412EA7 /* TodayViewController.swift */; };
+		BA101E881E25045500412EA7 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA101E861E25045500412EA7 /* MainInterface.storyboard */; };
+		BA101E8C1E25045500412EA7 /* Mooney Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BA101E801E25045500412EA7 /* Mooney Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BA200FCE1D73EB7E00607A94 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FC61D73EB7E00607A94 /* Category+CoreDataProperties.swift */; };
 		BA200FCF1D73EB7E00607A94 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FC71D73EB7E00607A94 /* Category.swift */; };
 		BA200FD01D73EB7E00607A94 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA200FC81D73EB7E00607A94 /* Account+CoreDataProperties.swift */; };
@@ -45,8 +49,37 @@
 		BAFE3B8B1D7EF65400764013 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFE3B8A1D7EF65400764013 /* CurrencyTextField.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BA101E8A1E25045500412EA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAC4D3821D6533CF0042C774 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA101E7F1E25045500412EA7;
+			remoteInfo = "Mooney Widget";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BA101E901E25045500412EA7 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BA101E8C1E25045500412EA7 /* Mooney Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		39B9912238B6806F5E1C7317 /* Pods-Mooney.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mooney.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mooney/Pods-Mooney.release.xcconfig"; sourceTree = "<group>"; };
+		BA101E801E25045500412EA7 /* Mooney Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mooney Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA101E811E25045500412EA7 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		BA101E841E25045500412EA7 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		BA101E871E25045500412EA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		BA101E891E25045500412EA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA200FC61D73EB7E00607A94 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA200FC71D73EB7E00607A94 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		BA200FC81D73EB7E00607A94 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -89,6 +122,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BA101E7D1E25045500412EA7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA101E821E25045500412EA7 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAC4D3871D6533CF0042C774 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -104,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				BAD40D0FA2E3DB0CF3686803 /* Pods_Mooney.framework */,
+				BA101E811E25045500412EA7 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,6 +157,16 @@
 				39B9912238B6806F5E1C7317 /* Pods-Mooney.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA101E831E25045500412EA7 /* Mooney Widget */ = {
+			isa = PBXGroup;
+			children = (
+				BA101E841E25045500412EA7 /* TodayViewController.swift */,
+				BA101E861E25045500412EA7 /* MainInterface.storyboard */,
+				BA101E891E25045500412EA7 /* Info.plist */,
+			);
+			path = "Mooney Widget";
 			sourceTree = "<group>";
 		};
 		BA2CE7E11D9A0B3B00254B41 /* API */ = {
@@ -140,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC4D38C1D6533CF0042C774 /* Mooney */,
+				BA101E831E25045500412EA7 /* Mooney Widget */,
 				BAC4D38B1D6533CF0042C774 /* Products */,
 				A4EBB1AFB212BF8130565FFF /* Pods */,
 				9ABEBADD0F0B45FFE76CB104 /* Frameworks */,
@@ -150,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC4D38A1D6533CF0042C774 /* Mooney.app */,
+				BA101E801E25045500412EA7 /* Mooney Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -245,6 +299,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BA101E7F1E25045500412EA7 /* Mooney Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA101E8D1E25045500412EA7 /* Build configuration list for PBXNativeTarget "Mooney Widget" */;
+			buildPhases = (
+				BA101E7C1E25045500412EA7 /* Sources */,
+				BA101E7D1E25045500412EA7 /* Frameworks */,
+				BA101E7E1E25045500412EA7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mooney Widget";
+			productName = "Mooney Widget";
+			productReference = BA101E801E25045500412EA7 /* Mooney Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		BAC4D3891D6533CF0042C774 /* Mooney */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAC4D39F1D6533CF0042C774 /* Build configuration list for PBXNativeTarget "Mooney" */;
@@ -255,10 +326,12 @@
 				BAC4D3881D6533CF0042C774 /* Resources */,
 				551A1ED4D38121B3237DD6E8 /* [CP] Embed Pods Frameworks */,
 				9FD0F2A3E8ADFD191C7804ED /* [CP] Copy Pods Resources */,
+				BA101E901E25045500412EA7 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BA101E8B1E25045500412EA7 /* PBXTargetDependency */,
 			);
 			name = Mooney;
 			productName = Mooney;
@@ -271,10 +344,15 @@
 		BAC4D3821D6533CF0042C774 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ricardo Gehrke Filho";
 				TargetAttributes = {
+					BA101E7F1E25045500412EA7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 2T9EKFYB5P;
+						ProvisioningStyle = Automatic;
+					};
 					BAC4D3891D6533CF0042C774 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 2T9EKFYB5P;
@@ -296,11 +374,20 @@
 			projectRoot = "";
 			targets = (
 				BAC4D3891D6533CF0042C774 /* Mooney */,
+				BA101E7F1E25045500412EA7 /* Mooney Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BA101E7E1E25045500412EA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA101E881E25045500412EA7 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAC4D3881D6533CF0042C774 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -365,6 +452,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BA101E7C1E25045500412EA7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA101E851E25045500412EA7 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BAC4D3861D6533CF0042C774 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,7 +498,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BA101E8B1E25045500412EA7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA101E7F1E25045500412EA7 /* Mooney Widget */;
+			targetProxy = BA101E8A1E25045500412EA7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		BA101E861E25045500412EA7 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA101E871E25045500412EA7 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		BAC4D3911D6533CF0042C774 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -423,6 +534,37 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BA101E8E1E25045500412EA7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 2T9EKFYB5P;
+				INFOPLIST_FILE = "Mooney Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.ricardofilho.RichRobot.Mooney-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BA101E8F1E25045500412EA7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEVELOPMENT_TEAM = 2T9EKFYB5P;
+				INFOPLIST_FILE = "Mooney Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "br.com.ricardofilho.RichRobot.Mooney-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		BAC4D39D1D6533CF0042C774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -544,6 +686,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BA101E8D1E25045500412EA7 /* Build configuration list for PBXNativeTarget "Mooney Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA101E8E1E25045500412EA7 /* Debug */,
+				BA101E8F1E25045500412EA7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BAC4D3851D6533CF0042C774 /* Build configuration list for PBXProject "Mooney" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

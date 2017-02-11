@@ -15,10 +15,10 @@ class API {
     static let sharedInstance = API()
     
     let dataStack = (UIApplication.shared.delegate as! AppDelegate).dataStack
-    let apiURL = "http://localhost:3000/api"
+    let apiURL = "http://localhost:8080/api"
 
     let headers: HTTPHeaders = [
-        "Authorization": "Basic cmljYXJkbzpyaTE1MTQxMw=="
+        "Authorization": "Basic cmljYXJkbzAxMDBAZ21haWwuY29tOjEyMzQ1Ng=="
     ]
     
     func sync() {

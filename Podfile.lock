@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (4.0.1)
-  - DATAStack (6.1.0)
-  - Sync (2.3.1):
-    - DATAStack (~> 6.1.0)
-    - SYNCPropertyMapper (~> 5.0.1)
-  - SYNCPropertyMapper (5.0.1)
+  - DATAStack (6.1.2)
+  - Sync (2.3.4):
+    - DATAStack (~> 6.1.2)
+    - SYNCPropertyMapper (~> 5.1.2)
+  - SYNCPropertyMapper (5.1.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -12,10 +12,10 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
-  DATAStack: 753e2b009ddb8918c6329919f09c1f9d2bcd7cc2
-  Sync: 6926aaf4fda1ae751591a54cff3c2d778bd821bc
-  SYNCPropertyMapper: 316eeeeaad170a7407a82b15989852fcbf1f6573
+  DATAStack: a45fc144e15193f1b22c26b507cc46655ce96a71
+  Sync: b946c2ab9c51153f075bcaec828215d071ddf6db
+  SYNCPropertyMapper: e4cf0f851aa3a1307a42985ab8600787b3382427
 
 PODFILE CHECKSUM: 9aa63bc7efaac920bc70cd257c4da3e0de2b623c
 
-COCOAPODS: 1.1.0.rc.2
+COCOAPODS: 1.1.1

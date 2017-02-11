@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Mooney Widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Mooney.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BA101E7F1E25045500412EA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BAC4D3891D6533CF0042C774</key>
 		<dict>
 			<key>primary</key>
