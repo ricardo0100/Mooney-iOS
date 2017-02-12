@@ -1,11 +1,3 @@
-//
-//  BaseEntity.swift
-//  Mooney
-//
-//  Created by Ricardo Gehrke Filho on 29/08/16.
-//  Copyright © 2016 Ricardo Gehrke Filho. All rights reserved.
-//
-
 import Foundation
 import CoreData
 import SYNCPropertyMapper
@@ -47,7 +39,7 @@ class BaseEntity: NSManagedObject {
                     // here "decoded" is of type `Any`, decoded from JSON data
                     
                     // you can now cast it with the right type
-                    if let dictFromJSON = decoded as? [String:String] {
+                    if let dictFromJSON = decoded as? [String: Any] {
                         // use dictFromJSON
                         accountsToSend.append(dictFromJSON)
                     }

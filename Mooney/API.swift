@@ -37,22 +37,25 @@ class API {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        let accounts = Account.jsonObjectsToUpsertInServer(context: self.dataStack.mainContext)
+        request.allHTTPHeaderFields = self.headers
         
-        let data = try! JSONSerialization.data(withJSONObject: accounts)
-        request.httpBody = data
-        Alamofire.request(request)
-            .responseJSON { response in
-                switch response.result {
-                case .failure(let error):
-                    print(error)
-                    
-                    if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
-                        print(responseString)
+        let accounts = Account.jsonObjectsToUpsertInServer(context: self.dataStack.mainContext)
+        for account in accounts {
+            let data = try! JSONSerialization.data(withJSONObject: account)
+            request.httpBody = data
+            Alamofire.request(request)
+                .responseJSON { response in
+                    switch response.result {
+                    case .failure(let error):
+                        print(error)
+                        
+                        if let data = response.data, let responseString = String(data: data, encoding: .utf8) {
+                            print(responseString)
+                        }
+                    case .success(let responseObject):
+                        print(responseObject)
                     }
-                case .success(let responseObject):
-                    print(responseObject)
-                }
+            }
         }
     }
  
